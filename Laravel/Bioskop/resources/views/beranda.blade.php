@@ -26,6 +26,10 @@
         .navbar a:hover {
             background-color: #575757;
         }
+
+        .navbar button {
+           margin-left : 80px ;
+        }
         .container {
             padding: 20px;
         }
@@ -81,11 +85,15 @@
     <a href="beranda.php">Beranda</a>
     <a href="jadwal.php">Jadwal</a>
     <a href="kontak.php">Kontak</a>
-    <form action="{{ route('logout') }}" method="POST" style="display: inline;">
-        @csrf
-        <button type="submit" class="btn btn-link p-0 m-0 align-baseline">Logout</button>
-        </form>
+
 </div>
+
+</div class = "tombol-logout">
+    <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+    @csrf
+    <button type="submit" class="btn btn-link p-0 m-0 align-baseline">Logout</button>
+</form>
+
 
 <!-- Konten Utama -->
 <div class="container">
