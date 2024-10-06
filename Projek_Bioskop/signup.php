@@ -2,6 +2,7 @@
 
     include 'service/database.php';
 
+    $sign_message = '';
     if(isset($_POST['signup'])){
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -10,9 +11,10 @@
         ('$username', '$password')";
 
         if($db->query($sql)){
-        }
-        else{
+            $sign_message = 'Daftar Akun Berhasil, Silahkan Login';
+        }else{
 
+            $sign_message = 'Daftar Akun Gagal, Coba Lagi';
         }
     }
 
@@ -32,6 +34,7 @@
         
         <div class="form-box">
             <form action='signup.php' method='POST'>
+                <i><?= $sign_message ?> </i>
                 <input type='text' placeholder='username' name='username'>
                 <input type='password' placeholder='password' name='password'>
                 <button type='submit' name='signup'>Daftar</button> 
