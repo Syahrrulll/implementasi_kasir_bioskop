@@ -58,7 +58,7 @@ body {
 
     background: #D9D9D9;
     border-radius: 24px;
-}
+    }
 
 .btn_signin {
     position: absolute;
@@ -74,10 +74,61 @@ body {
     color: #000000;
 }
 
+.image {
+    display : flex;
+    width : 100%;
+    transition: 2s;
+}
+
+.image img{
+    width : 100%;
+}
+
 .component1 {
     position: absolute;
+    margin: auto;
     width: 1046px;
     height: 478px;
     left: 117px;
     top: 329px;
+    border-radius :5px;
+    overflow:hidden;
+}
+
+#slide-1:target ~.image{
+    margin-left: 0px;
+}
+
+#slide-2:target ~ .image{
+    margin-left: -100%;
+}
+
+#slide-3:target ~ .image{
+    margin-left: -200%;
+}
+
+
+.navigates a{
+    display : inline-block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin : 3px;
+    background-color: #dedede;
+    font-size: 0%;
+    transition :1px;
+}
+
+.navigates a:hover{
+    background-color: grey;
+}
+
+.navigates {
+    position : absolute;
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+    left:0;
+    right: 0;
+    text-align : center;
 }
