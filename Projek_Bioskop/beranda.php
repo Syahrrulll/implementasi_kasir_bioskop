@@ -8,16 +8,12 @@
     <link rel="stylesheet" href="styles/style_beranda.css">
     <title>Selamat Datang di Bioskop</title>
 </head>
-<body>
+<body>L
     <div class='kepala'>
         SELAMAT DATANG DI BIOSKOP
     </div>
 
-    <div class='sign_up'></div>
-    <a href='signup.php' class='btn_signup'>Sign Up</a>
     
-    <div class='sign_in'></div>
-    <a href='signin.php' class='btn_signin'>Sign In</a>
 
     <div class='component1'>
 
@@ -32,7 +28,6 @@
             </div>
         </div>
 
-
         <div class='navigates'>
             <a href="#slide-1">1</a>
             <a href="#slide-2">2</a>
@@ -40,6 +35,12 @@
         </div>
     </div>
 
+    <img src='image/KEBINpng.png' class ='watermark-kebin'>
+
+    
+    <div class="footer">
+        <a href = "jadwal.php">jadwal</a>
+    </div>
 </body>
 
 

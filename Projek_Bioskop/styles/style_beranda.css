@@ -2,14 +2,15 @@ body {
     position: relative;
     width: 1280px;
     height: 1626px;
-    background: #FFFFFF;
+    background: white;
 }
+
 .kepala  {
     position: absolute;
     width: 1013px;
     height: 65px;
     left: calc(50% - 1013px/2 + 0.5px);
-    top: 60px;
+    top: 100px;
 
     font-family: 'Bree Serif';
     font-style: normal;
@@ -131,4 +132,14 @@ body {
     left:0;
     right: 0;
     text-align : center;
+}
+
+
+.watermark-kebin {
+    position: absolute;
+    width: 385px;
+    height: 353px;
+    left: -35px;
+    top: -50px;
+
 }
