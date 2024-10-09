@@ -2,11 +2,17 @@ body {
     position: relative;
     width: 1280px;
     height: 1626px;
-    background: white;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .kepala  {
-    position: absolute;
+    position: relative;
     width: 1013px;
     height: 65px;
     left: calc(50% - 1013px/2 + 0.5px);
@@ -18,6 +24,7 @@ body {
     font-size: 48px;
     line-height: 65px;
     text-align: center;
+    padding: 20px;
 
     color: #000000;
 

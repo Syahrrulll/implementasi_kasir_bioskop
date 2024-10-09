@@ -1,7 +1,7 @@
 <?php
 
     include 'service/database.php';
-
+    session_start();
     if(isset($_POST['signin'])){
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -12,7 +12,7 @@
         $result = $db->query($sql);
 
         if($result->num_rows > 0){
-
+            $_SESSION['loggedin'] = true;
             header('location: beranda.php');
         }
         else{
