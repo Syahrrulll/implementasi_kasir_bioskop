@@ -11,6 +11,10 @@ body, html {
     height: 100%;
 }
 
+body h6{
+    text-align: center;
+}
+
 .kepala  {
     position: relative;
     width: 1013px;
