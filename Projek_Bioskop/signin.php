@@ -13,10 +13,12 @@
 
         if($result->num_rows > 0){
             $_SESSION['loggedin'] = true;
-            header('location: beranda.php');
+
+            echo '<script>alert("Berhasil Masuk")</script>';
+            header('location: index.php');
         }
         else{
-            echo "Akun tidak ada";
+            echo '<script>alert("Akun Tidak Ada")</script>';
         }
 
     }
@@ -27,19 +29,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scle=1.0">
-    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/style_sign.css">
+    <title>Sign In</title>
 </head>
 <body>
-    <div class="container">
-        <div class="background"></div>
-        
-        <div class="form-box">
-            <form action='signin.php' method='POST'>
-                <input type='text' placeholder='username' name='username'>
-                <input type='password' placeholder='password' name='password'>
-                <button type='submit' name='signin'>Masuk</button> 
-            </form>
 
-            </div>
+
+    <div class="box-login">
+    </div>
+    <div class="border-sign">
+    </div>
+    <div class="sign-in">
+        Sign In
+    </div>
+
+
+    <form action="signin.php" method="POST">
+        <div class="input-username">
+            <input type="text" placeholder="Username" name="username">
+        </div>
+            
+        <div class="border-password">
+            <input type='password' placeholder='Password' name='password'> 
+        </div>
+
+        <div class="kirim">
+            <button type="submit" name="signin">Masuk</button>
+        </div>
+        <div class="caption-signin">
+            Belum punya akun? silakan
+        </div>
+        <div class="daftar">
+            <a href="signup.php">daftar</a>
+        </div>
+    </form>
 </body>
 </html>

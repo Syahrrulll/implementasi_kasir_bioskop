@@ -3,7 +3,7 @@
 $hostname = 'localhost';
 $username = 'root';
 $password = '';
-$database_name = 'user_bioskop';
+$database_name = 'bioskop';
 
 $db = mysqli_connect($hostname, $username, $password, $database_name);
 

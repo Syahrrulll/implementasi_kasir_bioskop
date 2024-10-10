@@ -8,7 +8,7 @@ include 'service/database.php'
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style_beranda.css">
+    <link rel="stylesheet" href="css/style_beranda.css">
     <title>Selamat Datang di Bioskop</title>
 </head>
 <body>
@@ -76,7 +76,7 @@ include 'service/database.php'
 
     <div class="navbar">
         <div class="home_logo">
-            <a href="beranda.php">
+            <a href="index.php">
                 <img src="image/Home.png">
             </a>
         </div>

@@ -26,49 +26,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_sign.css">
     <title>Sign Up</title>
 </head>
 <body>
-    <div class="container">
-        <div class="background"></div>
-        
-        <div class="form-box">
-            <form action='signup.php' method='POST'>
-                <i><?= $sign_message ?> </i>
-                <input type='text' placeholder='username' name='username'>
-                <input type='password' placeholder='password' name='password'>
-                <button type='submit' name='signup'>Daftar</button> 
-            </form>
+<div class="box-login">
+    </div>
+    <div class="border-sign">
+    </div>
+    <div class="sign-in">
+        Sign Up
+    </div>
 
-            </div>
+    <form action="signup.php" method="POST">
+        <div class="input-username">
+            <input type="text" placeholder="Username" name="username">
+        </div>
+            
+        <div class="border-password">
+            <input type='password' placeholder='Password' name='password'> 
+        </div>
+
+        <div class="kirim">
+            <button type="submit">Daftar</button>
+        </div>
+        <div class="caption-signin">
+            Sudah punya akun? silakan
+        </div>
+        <div class="daftar">
+            <a href="signin.php" name="signup">masuk</a>
+        </div>
+
+        <div class="lewati">
+            Lewati
+        </div>
+        <div class='skip'>
+            <a href="index.php">
+                <img src ="image/lewati.png">
+            </a>
+        </div>
+    </form>
 </body>
-
-<style>
-    body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    position: relative;
-    width: 1440px;
-    height: 1024px;
-    background: #799CBF;
-}
-
-/* Kotak Form */
-.form-box {
-    position: absolute;
-    width: 676px;
-    height: 478px;
-    left: 382px;
-    top: 240px;
-    background: rgba(217, 217, 217, 0.68);
-    border-radius: 39px;
-}
-
-</style>
 </html>
