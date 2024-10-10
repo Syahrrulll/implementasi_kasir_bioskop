@@ -61,7 +61,7 @@
             Lewati
         </div>
         <div class='skip'>
-            <a href="index.php">
+            <a href="../Projek_Bioskop.com">
                 <img src ="image/lewati.png">
             </a>
         </div>

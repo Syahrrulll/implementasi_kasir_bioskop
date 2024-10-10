@@ -7,7 +7,7 @@ if(isset($_SESSION['admin']) and $_SESSION['admin'] == true){
 }
 else {
     echo '<script>alert("Anda Bukan Admin")</script>';
-    header('location: index.php');
+    header('location: ../Project_Bioskop.com');
 }
 ?>
 

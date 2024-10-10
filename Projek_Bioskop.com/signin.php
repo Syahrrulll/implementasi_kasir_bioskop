@@ -14,7 +14,7 @@
         if($result->num_rows > 0){
             $_SESSION['loggedin'] = true;
             
-            header('location: index.php');
+            header('location: ../Projek_Bioskop.com');
         }
 
         else if($_POST['username'] == "Admin" && $_POST['password'] == "pass123"){

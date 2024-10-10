@@ -77,7 +77,7 @@ include 'service/database.php'
 
     <div class="navbar">
         <div class="home_logo">
-            <a href="index.php">
+            <a href="../Projek_Bioskop.com">
                 <img src="image/Home.png">
             </a>
         </div>
