@@ -41,6 +41,7 @@ include 'service/database.php'
 
     <?php   
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+        echo '<script>alert("Berhasil Masuk")</script>';
         include 'layout/logout.html';
     }
     else{

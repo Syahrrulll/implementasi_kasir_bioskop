@@ -13,10 +13,15 @@
 
         if($result->num_rows > 0){
             $_SESSION['loggedin'] = true;
-
-            echo '<script>alert("Berhasil Masuk")</script>';
+            
             header('location: index.php');
         }
+
+        else if($_POST['username'] == "Admin" && $_POST['password'] == "pass123"){
+            $_SESSION['admin'] = true;
+            header('location: admin.php');
+        }
+
         else{
             echo '<script>alert("Akun Tidak Ada")</script>';
         }
