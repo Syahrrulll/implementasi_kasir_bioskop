@@ -22,14 +22,23 @@ include 'service/database.php'
     background-image: url('image/bg.png');
     background-size: cover;
     background-position: center;
-    opacity: 0.3;
+    opacity: 0.2;
     z-index: -1;
+    filter : grayscale(1);
     "></div>
 
     
     <div class="kepala">
-        SELAMAT DATANG DI WEB KEBIN
+        <div class="bg_header"><img src="image/header.png"></div>
+        <div class="welcome">
+            SELAMAT DATANG DI WEB KEBIN
+        </div>
+        <div class="description">Film Favoritmu, Pesan Tiket dengan Mudah dan Cepat!</div>
+        <div class="batas_header"></div>
     </div>
+
+    <div class="caption">Dapatkan tiket film favoritmu kapan saja, di mana saja, bebas antri dan dijamin aman!</div>
+
     <?php   
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
         include 'layout/logout.html';
@@ -57,7 +66,21 @@ include 'service/database.php'
             <a href="#slide-3">3</a>
         </div>
     </div>
+    <div class="scroll">
+        <div class="Daftar_Film">
+            <div class="Item"><img src="image/frame1.png"></div>
+            <div class="Item"><img src="image/Frame2.png"></div>
+            <div class="Item"><img src="image/frame3.png"></div>
+        </div>
+    </div>
 
+    <div class="navbar">
+        <div class="home_logo">
+            <a href="beranda.php">
+                <img src="image/Home.png">
+            </a>
+        </div>
+    </div>
     <img src="image/KEBINpng.png" class="watermark-kebin" alt="Watermark Kebin">
 </body>
 </html>
