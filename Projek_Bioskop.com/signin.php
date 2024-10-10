@@ -11,15 +11,14 @@
 
         $result = $db->query($sql);
 
-        if($result->num_rows > 0){
-            $_SESSION['loggedin'] = true;
-            
-            header('location: ../Projek_Bioskop.com');
+        if($_POST['username'] == "Admin" && $_POST['password'] == "pass123"){
+            $_SESSION['admin'] = true;
+            header('location: ./Admin.com');  
         }
 
-        else if($_POST['username'] == "Admin" && $_POST['password'] == "pass123"){
-            $_SESSION['admin'] = true;
-            header('location: admin.php');
+        else if ($result->num_rows > 0){
+            $_SESSION['loggedin'] = true;
+            header('location: ../Projek_Bioskop.com');
         }
 
         else{
