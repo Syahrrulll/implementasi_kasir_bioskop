@@ -1,6 +1,8 @@
 <?php
 session_start();
-include 'service/database.php'
+include 'service/database.php';
+
+$_SESSION['admin'] = false;
 ?>
 
 <!DOCTYPE html>
@@ -54,10 +56,10 @@ include 'service/database.php'
          include 'layout/guest.html';
      }
      
-     if ($_SESSION['alert'] == true){
+     if (isset($_SESSION['alert']) && $_SESSION['alert'] == true){
          echo '<script>alert("Berhasil Masuk")</script>';
          $_SESSION['alert'] = false;
-     }else if ($_SESSION['alertadmin'] == true){
+     }else if (isset($_SESSION['alertadmin']) && $_SESSION['alertadmin'] == true){
         echo '<script>alert("Anda Bukan Admin")</script>';
         $_SESSION['alertadmin'] = false;
      }
