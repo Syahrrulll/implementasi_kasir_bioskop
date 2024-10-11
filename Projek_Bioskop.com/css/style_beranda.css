@@ -9,7 +9,7 @@ body {
 .container {
    
     position: relative;
-    margin-left:7%;
+    /* margin-left:7%; */
     padding:0;
 }
 
@@ -151,7 +151,7 @@ body {
 .image {
     display : flex;
     width : 100%;
-    transition: 2s;
+    transition: 3s;
 }
 
 .image img{
@@ -190,7 +190,7 @@ body {
     margin : 3px;
     background-color: #dedede;
     font-size: 0%;
-    transition :1ms;
+    transition :3ms;
 }
 
 .navigates a:hover{
@@ -230,10 +230,31 @@ body {
     width: max-content;
     gap: 4rem;
     margin-top:900px;
-    background-color:rgba(91, 149, 178, 0.901);
     border-radius: 10px;
     padding:15px;
+    animation: scroll 40s linear infinite;
+    perspective: 200px;
 }
+
+.Daftar_Film:hover {
+    animation-play-state : paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 9));
+    }
+    200%{
+        transform: translateX(calc(250px * 9))
+    }
+    
+}
+
+
+
 
 .horizontal-scroll {
     width : 100%;
@@ -281,6 +302,14 @@ body {
     width : 239px;
     height: 324px;
     border-radius: 25px;
+}
+
+.Item {
+    transition : 1s;
+}
+
+.Item:hover{
+    transform : translateZ(20px);
 }
 
 
