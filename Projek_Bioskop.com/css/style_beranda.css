@@ -15,7 +15,7 @@ body {
 
 .bg_header {
     position: relative ;
-    width: 100%;
+    width: 119%;
     
     height: 197px;
     left: 0px;
@@ -39,9 +39,10 @@ body {
     position: absolute;
     width: 1013px;
     height: 65px;
-    left: calc(50% - 1013px/2 + 0.5px);
     top: 30px;
+    margin-left:18%;
 
+    justify-content: center;
     font-family: 'Bree Serif';
     font-style: normal;
     font-weight: 400;
@@ -57,7 +58,7 @@ body {
     position: absolute;
     width: 707px;
     height: 33px;
-    left: 300px;
+    margin-left:30%;
     top: 120px;
 
     font-family: 'Bree Serif';
@@ -72,7 +73,7 @@ body {
 
 .batas_header{
     position: absolute;
-    width: 100%;
+    width: 119%;
     height: 67px;
     left: 0px;
     right: 0px;
@@ -86,7 +87,7 @@ body {
     position: absolute;
     width: 937px;
     height: 33px;
-    left: 172px;
+    margin-left:21%;
     top: 827px;
 
     font-family: 'Bree Serif';
@@ -101,7 +102,7 @@ body {
     position: absolute;
     width: 128px;
     height: 51px;
-    left: 1091px;
+    right:50px;
     top: 33px;
 
     background: #D9D9D9;
@@ -112,7 +113,7 @@ body {
     position: absolute;
     width: 91px;
     height: 42px;
-    left: 1114px;
+    right:50px;
     top: 45px;
 
     font-family: 'Bree Serif';
@@ -128,7 +129,7 @@ body {
     position: absolute;
     width: 128px;
     height: 46px;
-    left: 1091px;
+    right: 50px;
     top: 87px;
 
     background: #D9D9D9;
@@ -139,7 +140,7 @@ body {
     position: absolute;
     width: 67px;
     height: 26px;
-    left: 1114px;
+    right: 74px;
     top: 97px;
     font-family: 'Bree Serif';
     font-style: normal;
@@ -163,7 +164,7 @@ body {
     margin: auto;
     width: 1046px;
     height: 478px;
-    left: 117px;
+    margin-left: 17%;
     top: 329px;
     border-radius :50px;
     overflow:hidden;
@@ -312,6 +313,55 @@ body {
     transform : translateZ(20px);
 }
 
+@media (max-width: 1366px){
+    .bg_header{
+        width : 1365px;
+    }
+    .batas_header{
+        width: 1365px;
+    }
+    
+    .component1{
+        margin-left:176px;
+    }
+    .welcome {
+        margin-left:180px;
+    }
+    .caption{
+        margin-left:235px;;
+    }
+}
+
+@media (max-width: 1280px){
+    .bg_header{
+        width : 1280px;
+    }
+    .batas_header{
+        width: 1280px;
+    }
+    .component1{
+        margin-left: 113px ;
+    }
+    .caption{
+        margin-left: 150px;
+    }
+    .sign_in{
+        right: 11px;
+    }
+    .btn_signin{
+        right: 31px;
+    }
+    .sign_up
+    {
+        right: 11px;
+    }
+    .btn_signup{
+        right: 11px;
+    }
+    .watermark-kebin{
+        margin-left: 29px;
+    }
+}
 
 @media (max-width: 1046px) {
     .welcome {
