@@ -48,8 +48,9 @@
         </div>
 
         <div class="kirim">
-            <button type="submit">Daftar</button>
+            <button type="submit" name="signup">Daftar</button>
         </div>
+    </form>
         <div class="caption-signin">
             Sudah punya akun? silakan
         </div>
@@ -65,6 +66,5 @@
                 <img src ="image/lewati.png">
             </a>
         </div>
-    </form>
 </body>
 </html>
