@@ -65,23 +65,12 @@ include 'service/database.php'
          <div class="caption">Dapatkan tiket film favoritmu kapan saja, di mana saja, bebas antri dan dijamin aman!</div>
      
          <div class="component1">
-             <div class="slides">
-                 <span id="slide-1"></span>
-                 <span id="slide-2"></span>
-                 <span id="slide-3"></span>
                  <div class="image">
                      <img src="image/slide_1.png" alt="Slide 1">
                      <img src="image/slide_2.png" alt="Slide 2">
                      <img src="image/slide_3.png" alt="Slide 3">
                  </div>
              </div>
-     
-             <div class="navigates">
-                 <a href="#slide-1">1</a>
-                 <a href="#slide-2">2</a>
-                 <a href="#slide-3">3</a>
-             </div>
-         </div>
 
          
          

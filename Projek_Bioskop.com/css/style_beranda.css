@@ -152,12 +152,48 @@ body {
 .image {
     display : flex;
     width : 100%;
+    animation: slide 16s infinite;
     transition: 3s;
+    perspective: 200px;
+}
+
+.image:hover {
+    transform: translateZ(20px);
+}
+
+.component1:hover{
+    animation-play-state: paused;
+}
+
+@keyframes slide{
+    0% {
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(0);
+    }
+    40%{
+        transform: translateX(-100%);
+    }
+    60%{
+        transform: translateX(-100%);
+    }
+    80%{
+        transform: translateX(-200%);
+    }
+    90%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
 
 .image img{
     width : 100%;
+
 }
+
 
 .component1 {
     position: absolute;
@@ -168,20 +204,8 @@ body {
     top: 329px;
     border-radius :50px;
     overflow:hidden;
+    animation: slides 1s infinite;
 }
-
-#slide-1:target ~.image{
-    margin-left: 0px;
-}
-
-#slide-2:target ~ .image{
-    margin-left: -100%;
-}
-
-#slide-3:target ~ .image{
-    margin-left: -200%;
-}
-
 
 .navigates a{
     display : inline-block;
