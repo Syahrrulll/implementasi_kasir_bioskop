@@ -18,6 +18,7 @@
 
         else if ($result->num_rows > 0){
             $_SESSION['loggedin'] = true;
+            $_SESSION['alert'] = true;
             header('location: ../Projek_Bioskop.com');
         }
 
@@ -38,6 +39,19 @@
 </head>
 <body>
 
+    <div class="backgroun-sign" style ="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('image/Background_login.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: -1;
+    filter : grayscale(1);
+    "></div>
 
     <div class="box-login">
     </div>
@@ -46,6 +60,7 @@
     <div class="sign-in">
         Sign In
     </div>
+
 
 
     <form action="signin.php" method="POST">
