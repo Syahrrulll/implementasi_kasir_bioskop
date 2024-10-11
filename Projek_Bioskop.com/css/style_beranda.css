@@ -235,6 +235,7 @@ body {
     padding:15px;
     animation: scroll 40s linear infinite;
     perspective: 200px;
+    margin-left: 45%;
 }
 
 .Daftar_Film:hover {
