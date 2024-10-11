@@ -1,0 +1,323 @@
+body {
+    position: relative;
+    width : 100%;
+    background-color: #ffffff;
+    margin :0;
+    padding:0;
+}
+
+.bg_header {
+    position: absolute;
+    width: 100%;
+    align-content: center;
+    height: 197px;
+    left: 0px;
+    top: 0px;
+
+}
+
+.kepala{
+    position: absolute;
+    width: 1280px;
+    height: 197px;
+    left: 0px;
+    top: 0px;
+
+}
+
+
+
+.welcome  {
+    position: relative;
+    width: 1013px;
+    height: 65px;
+    left: calc(50% - 1013px/2 + 0.5px);
+    top: 30px;
+
+    font-family: 'Bree Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 65px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+
+}
+
+.description{
+    position: absolute;
+    width: 707px;
+    height: 33px;
+    left: 300px;
+    top: 100px;
+
+    font-family: 'Bree Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 33px;
+    text-align: center;
+    color: white;
+
+}
+
+.batas_header{
+    position: absolute;
+    width: 1280px;
+    height: 67px;
+    left: 0px;
+    top: 190px;
+
+    background: #D9D9D9;
+    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.caption {
+    position: absolute;
+    width: 937px;
+    height: 33px;
+    left: 172px;
+    top: 827px;
+
+    font-family: 'Bree Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+}
+
+.sign_up {
+    position: absolute;
+    width: 128px;
+    height: 51px;
+    left: 1091px;
+    top: 33px;
+
+    background: #D9D9D9;
+    border-radius: 24px;
+}
+
+.btn_signup{
+    position: absolute;
+    width: 91px;
+    height: 42px;
+    left: 1114px;
+    top: 45px;
+
+    font-family: 'Bree Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #000000;
+}
+
+.sign_in {
+    position: absolute;
+    width: 128px;
+    height: 46px;
+    left: 1091px;
+    top: 87px;
+
+    background: #D9D9D9;
+    border-radius: 24px;
+    }
+
+.btn_signin {
+    position: absolute;
+    width: 67px;
+    height: 26px;
+    left: 1114px;
+    top: 97px;
+    font-family: 'Bree Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.image {
+    display : flex;
+    width : 100%;
+    transition: 2s;
+}
+
+.image img{
+    width : 100%;
+}
+
+.component1 {
+    position: absolute;
+    margin: auto;
+    width: 1046px;
+    height: 478px;
+    left: 117px;
+    top: 329px;
+    border-radius :50px;
+    overflow:hidden;
+}
+
+#slide-1:target ~.image{
+    margin-left: 0px;
+}
+
+#slide-2:target ~ .image{
+    margin-left: -100%;
+}
+
+#slide-3:target ~ .image{
+    margin-left: -200%;
+}
+
+
+.navigates a{
+    display : inline-block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin : 3px;
+    background-color: #dedede;
+    font-size: 0%;
+    transition :1ms;
+}
+
+.navigates a:hover{
+    background-color: grey;
+}
+
+.navigates {
+    position : absolute;
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+    left:0;
+    right: 0;
+    text-align : center;
+}
+
+
+.watermark-kebin {
+    position: absolute;
+    width: 385px;
+    height: 353px;
+    left: -35px;
+    top: -50px;
+
+}
+
+
+
+.Daftar_Film{
+    position: absolute;
+    display: flex;
+    width: max-content;
+    gap: 10rem;
+    left: 85px;
+    top: 919px;
+}
+
+
+.scroll {
+    width: 100%;
+    overflow-x:scroll;
+}
+
+.navbar{
+    /* Nav bar */
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 21px 110px;
+    gap: 98px;
+    isolation: isolate;
+
+    position: absolute;
+    width: 553px;
+    height: 109px;
+    left: 364px;
+    top: 1498px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 45px;
+
+}
+
+.home_logo {
+    
+
+    width: 65px;
+    height: 67px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
+
+}
+
+@media (max-width: 1046px) {
+    .welcome {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .sign_up, .sign_in {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .component1 {
+        width: 100%;
+    }
+
+    .watermark-kebin {
+        width: 20%;
+    }
+
+    .kepala {
+        padding: 10px;
+        height: auto;
+    }
+
+    .batas_header {
+        height: 50px;
+        margin-top: 10px;
+    }
+
+    .navigates a {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .welcome {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .sign_up, .sign_in {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .watermark-kebin {
+        width: 30%;
+    }
+}
