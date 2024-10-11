@@ -11,10 +11,10 @@
         ('$username', '$password')";
 
         if($db->query($sql)){
-            $sign_message = 'Daftar Akun Berhasil, Silahkan Login';
+            echo '<script> alert("Daftar Akun Berhasil, Silahkan Login")</script>';
         }else{
 
-            $sign_message = 'Daftar Akun Gagal, Coba Lagi';
+            echo '<script> alert("Daftar Akun Gagal, Coba Lagi")</script>';
         }
     }
 
