@@ -26,7 +26,7 @@ try {
             judul VARCHAR(100) NOT NULL,
             genre VARCHAR(50) NOT NULL,
             deskripsi TEXT,
-            durasi TIME,
+            durasi INT,
             poster VARCHAR(255)
         )";
 
