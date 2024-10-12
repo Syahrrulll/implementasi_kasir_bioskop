@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 if (isset($_SESSION['admin']) and $_SESSION['admin'] == true) {
 } else {
     $_SESSION['alertadmin']  = true;
@@ -13,7 +15,7 @@ $id = $_GET['id'];
 
 $query = "DELETE FROM film WHERE id = '$id'";
 
-if($connection->query($query)) {
+if($db->query($query)) {
     $_SESSION['alertdelete'] = true;
     header("location: index.php");
 } else {
