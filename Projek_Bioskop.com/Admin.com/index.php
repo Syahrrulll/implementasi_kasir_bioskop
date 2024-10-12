@@ -144,6 +144,7 @@ if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true) {
         <div class="nav">
             <a href="tambah_film.php">Tambah Film</a>
             <a href="daftar_film.php">Daftar Film</a>
+            <a href="koneksi_table.php">Buat Table</a>
             <a href="../logout.php">Keluar</a>
         </div>
         <div class="content">
