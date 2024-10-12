@@ -49,7 +49,7 @@
                   <td><?php echo $row['genre'] ?></td>
                   <td><?php echo $row['deskripsi'] ?></td>
                   <td><?php echo $row['durasi'] ?></td>
-                  <td><img src="../image/<?php echo $row['poster'] ?>" alt="Poster" style="width: 50px; height: auto;"></td>
+                  <td><img src="../image/<?php echo ltrim($row['poster']); ?>" alt="Poster" style="width: 50px; height: auto;"></td>
                   <td class="text-center">
                     <a href="edit_film.php?id=<?php echo $row['id'] ?>" class="btn btn-sm btn-primary">EDIT</a>
                     <a href="hapus_film.php?id=<?php echo $row['id'] ?>" class="btn btn-sm btn-danger">HAPUS</a>
