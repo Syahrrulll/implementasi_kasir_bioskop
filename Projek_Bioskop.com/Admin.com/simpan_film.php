@@ -1,5 +1,12 @@
 <?php
 
+if (isset($_SESSION['admin']) and $_SESSION['admin'] == true) {
+} else {
+    $_SESSION['alertadmin']  = true;
+    header('location: ../../Projek_Bioskop.com');
+}
+
+session_start();
 include ("../service/database.php");
 
 $judulfilm = $_POST['judul'];
@@ -21,7 +28,7 @@ else{
 }
 
 if($db->query($query)) {
-
+    $_SESSION['alertsave'] = true;
     header("location: ../Admin.com");
 
 } else {

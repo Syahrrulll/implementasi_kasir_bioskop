@@ -3,11 +3,27 @@
 session_start();
 
 if (isset($_SESSION['admin']) and $_SESSION['admin'] == true) {
-    echo '<script>alert("Berhasil Masuk Sebagai Admin")</script>';
+    if (isset($_SESSION['alertadmin']) && $_SESSION['alertadmin'] == true){
+        $_SESSION['alertadmin'] = false;
+        echo '<script>alert("Berhasil Masuk Sebagai Admin")</script>';
+    }
 } else {
     $_SESSION['alertadmin']  = true;
     header('location: ../../Projek_Bioskop.com');
 }
+
+if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true){
+    $_SESSION['alertupdate'] = false;
+    echo '<script>alert("Berhasil Update Data")</script>';
+} else if (isset($_SESSION['alertsave']) and $_SESSION['alertsave'] == true){
+    $_SESSION['alertsave'] = false;
+    echo '<script>alert("Berhasil Menyimpan Data")</script>';
+} else if (isset($_SESSION['alertdelete']) and $_SESSION['alertdelete'] == true){
+    $_SESSION['alertdelete'] = false;
+    echo '<script>alert("Berhasil Menghapus Data")</script>';
+}
+
+
 
 ?>
 <!DOCTYPE html>
