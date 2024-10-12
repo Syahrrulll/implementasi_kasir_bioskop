@@ -45,7 +45,7 @@ $_SESSION['admin'] = false;
             <div class="welcome">
                 SELAMAT DATANG DI WEB KEBIN
             </div>
-            <div class="description">Film Favoritmu, Pesan Tiket dengan Mudah dan Cepat!</div>
+            <div class="description">Nikmati Film Favoritmu, Pesan Tiket dengan Mudah dan Cepat!</div>
             <div class="batas_header"></div>
         </div>
 
