@@ -16,40 +16,41 @@ if (isset($_SESSION['sync']) and $_SESSION['sync'] == true){
     include "../service/database.php";
     $conn = new mysqli($hostname, $username, $password, $database_name);
 
-        if ($conn->connect_error) {
-            echo "<p class='error'>Koneksi gagal: " . $conn->connect_error . "</p>";
-        } else {
-            $backup_file = 'db/bioskop.sql';
-            $sql = file_get_contents($backup_file);
+    if ($conn->connect_error) {
+    } else {
+        $backup_file = 'db/bioskop.sql';
+        $sql = file_get_contents($backup_file);
 
-            
-            $sql = str_replace('utf8mb4_0900_ai_ci', 'utf8mb4_unicode_ci', $sql);
-            
-            
-            $queries = explode(';', $sql);
-            
-           
-            foreach ($queries as $query) {
-                $query = trim($query);
-            
-                if (!empty($query)) {
-                  
-                    if (stripos($query, 'CREATE TABLE') === 0) {
-                        if (stripos($query, 'IF NOT EXISTS') === false) {
-                            $query = preg_replace('/^CREATE TABLE/i', 'CREATE TABLE IF NOT EXISTS', $query);
-                        }
-            
-                        if (preg_match('/CREATE TABLE IF NOT EXISTS `?(\w+)`?/i', $query, $matches)) {
-                            $table_name = $matches[1];
-                            $check_table = $conn->query("SHOW TABLES LIKE '$table_name'");
-                        }
-                    } else {
-                        $query = preg_replace('/^INSERT INTO/i', 'INSERT IGNORE INTO', $query);
+        
+        $sql = str_replace('utf8mb4_0900_ai_ci', 'utf8mb4_unicode_ci', $sql);
+        
+        
+        $queries = explode(';', $sql);
+        
+       
+        foreach ($queries as $query) {
+            $query = trim($query);
+        
+            if (!empty($query)) {
+              
+                if (stripos($query, 'CREATE TABLE') === 0) {
+                    if (stripos($query, 'IF NOT EXISTS') === false) {
+                        $query = preg_replace('/^CREATE TABLE/i', 'CREATE TABLE IF NOT EXISTS', $query);
                     }
+        
+                    if (preg_match('/CREATE TABLE IF NOT EXISTS `?(\w+)`?/i', $query, $matches)) {
+                        $table_name = $matches[1];
+                        $check_table = $conn->query("SHOW TABLES LIKE '$table_name'");
+                        if ($check_table->num_rows === 0) {
+                        }
+                    }
+                } else {
+                    $query = preg_replace('/^INSERT INTO/i', 'INSERT IGNORE INTO', $query);
                 }
             }
-            
         }
+        
+    }
         echo '<script>alert("Berhasil Sinkronisasi Data")</script>';
         $_SESSION['sync'] = false;
 }
