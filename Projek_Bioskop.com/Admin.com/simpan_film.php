@@ -12,7 +12,7 @@ include ("../service/database.php");
 $judulfilm = $_POST['judul'];
 $durasifilm = $_POST['durasi'];
 $genrefilm = $_POST['genre'];
-$hargatiket = $_POST['tiket'];
+$hargatiket = $_POST['harga'];
 $deskripsifilm = $_POST['deskripsi'];
 
 $file_name = $_FILES['poster']['name'];

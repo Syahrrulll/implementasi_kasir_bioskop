@@ -60,7 +60,7 @@ if (isset($_SESSION['admin']) and $_SESSION['admin'] == true) {
                   <td><?php echo $row['judul'] ?></td>
                   <td><?php echo $row['genre'] ?></td>
                   <td><?php echo $row['deskripsi'] ?></td>
-                  <td><?php echo $row['durasi'] ?></td>
+                  <td><?php echo $row['durasi']." menit" ?></td>
                   <td><?php echo $row['harga'] ?></td>
                   <td><img src="../image/<?php echo ltrim($row['poster']); ?>" alt="Poster" style="width: 50px; height: auto;"></td>
                   <td class="text-center">
