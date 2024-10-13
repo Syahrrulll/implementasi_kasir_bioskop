@@ -11,9 +11,9 @@ $check_db = $db->query("SHOW DATABASES LIKE '$database_name'");
 
 $create_users_table = "CREATE TABLE IF NOT EXISTS users (
                 id INT PRIMARY KEY AUTO_INCREMENT,
-                nama VARCHAR(255) UNIQUE,
+                username VARCHAR(255) UNIQUE,
                 password VARCHAR(255),
-                current_add DATE DEFAULT CURRENT_TIMESTAMP
+                created_add DATE DEFAULT CURRENT_TIMESTAMP
             )";
 
 $db = mysqli_connect($hostname, $username, $password, $database_name);

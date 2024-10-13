@@ -1,3 +1,13 @@
+<?php
+
+if (isset($_SESSION['admin']) and $_SESSION['admin'] == true) {
+} else {
+    $_SESSION['alertadmin']  = true;
+    header('location: ../../Projek_Bioskop.com');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
