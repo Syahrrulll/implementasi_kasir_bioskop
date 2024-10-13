@@ -264,7 +264,7 @@ body {
         transform: translateX(50%);
     }
     100%{
-   transform: translateX(calc(-250px * 11));
+        transform: translateX(calc(-250px * 11));
     }    
 }
 

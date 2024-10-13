@@ -11,7 +11,7 @@ include('../service/database.php');
 
 $id = $_GET['id'];
 
-$query = "SELECT * FROM film WHERE id = $id LIMIT 1";
+$query = "SELECT * FROM users WHERE id = $id LIMIT 1";
 
 $result = mysqli_query($db, $query);
 
