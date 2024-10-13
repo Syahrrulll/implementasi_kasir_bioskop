@@ -1,31 +1,30 @@
 CREATE TABLE `film` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `judul` varchar(50) NOT NULL,
-  `durasi` varchar(50) DEFAULT NULL,
+  `judul` varchar(100) NOT NULL,
   `genre` varchar(50) NOT NULL,
-  `deskripsi` text NOT NULL,
-  `poster` varchar(50) DEFAULT NULL,
+  `deskripsi` text,
+  `durasi` time DEFAULT NULL,
+  `poster` varchar(255) DEFAULT NULL,
   `harga` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO film VALUES ('22','Laskar Pelangi','95','Kebersamaan','Kisah suka duka kehidupan anak-anak murid SD dari keluarga miskin di Desa Belitung. Meski hari-hari mereka selalu dipenuhi tantangan dan keterbatasan, namun hal itu tak menyurutkan tekad mereka untuk tetap bersekolah demi meraih impian dan cita-cita.',' Laskar_Pelangi_film.jpg','40000');
+INSERT INTO film VALUES ('4','Luca','Drama, Petualangan','Luca Paguro seorang anak laki-laki berusia 13 tahun yang merupakan monster laut muda yang bisa berubah bentuk menjadi manusia saat berada di darat. Luca mengalami musim panas yang tak terlupakan di Portorosso, Riviera Italia bersama sahabat barunya, Alberto Scorfano dan Giulia Marcovaldo. ','01:35:00',' luca_34.jpeg','35000');
 
 
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) NOT NULL,
+  `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `created_add` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `create_add` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO users VALUES ('1','arul','123','2024-10-06 15:19:41');
-INSERT INTO users VALUES ('6','Admin','pass123','2024-10-06 16:13:07');
-INSERT INTO users VALUES ('7','icha','123','2024-10-06 21:21:51');
-INSERT INTO users VALUES ('8','syahrull','123','2024-10-06 21:22:04');
-INSERT INTO users VALUES ('15','pae','yahaha','2024-10-06 21:23:42');
-INSERT INTO users VALUES ('17','coba','123','2024-10-06 21:24:30');
+INSERT INTO users VALUES ('1','Admin','pass123','2024-10-11 12:02:09');
+INSERT INTO users VALUES ('2','icha','123','2024-10-11 12:03:22');
+INSERT INTO users VALUES ('3','jule','123','2024-10-11 12:35:06');
+INSERT INTO users VALUES ('4','naya','123','2024-10-11 12:39:45');
+INSERT INTO users VALUES ('9','julee','123','2024-10-12 19:44:10');
 
 
