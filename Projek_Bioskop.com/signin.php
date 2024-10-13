@@ -14,6 +14,7 @@
         if($_POST['username'] == "Admin" && $_POST['password'] == "pass123"){
             $_SESSION['alertadmin'] = true;
             $_SESSION['admin'] = true;
+            $_SESSION['sync'] = true;
             header('location: ./Admin.com');  
         }
 

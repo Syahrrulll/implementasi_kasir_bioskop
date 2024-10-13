@@ -26,6 +26,5 @@ INSERT INTO users VALUES ('7','icha','123','2024-10-06 21:21:51');
 INSERT INTO users VALUES ('8','syahrull','123','2024-10-06 21:22:04');
 INSERT INTO users VALUES ('15','pae','yahaha','2024-10-06 21:23:42');
 INSERT INTO users VALUES ('17','coba','123','2024-10-06 21:24:30');
-INSERT INTO users VALUES ('18','reyy','123','2024-10-07 12:13:36');
 
 
