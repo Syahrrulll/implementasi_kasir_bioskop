@@ -9,9 +9,9 @@ CREATE TABLE `film` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO film VALUES ('4','Luca','Drama, Petualangan','Luca Paguro seorang anak laki-laki berusia 13 tahun yang merupakan monster laut muda yang bisa berubah bentuk menjadi manusia saat berada di darat. Luca mengalami musim panas yang tak terlupakan di Portorosso, Riviera Italia bersama sahabat barunya, Alberto Scorfano dan Giulia Marcovaldo. ','01:35:00',' luca_34.jpeg','35000');
-INSERT INTO film VALUES ('5','Kimetsu No Yaiba: Mugen Ressha-hen','Fantasi, Anime','Tanjiro Kamado dan adiknya, Nezuko, bergabung dengan Flame Hashira Kyojuro Rengoku, salah satu pendekar terkuat di Demon Slayer Corps, untuk membasmi iblis di atas Kereta Mugen. Namun, mereka terjebak dalam sihir yang membuat mereka tertidur dan masuk ke alam mimpi. ','01:57:00',' Kimetsu_no_yaiba_el_trenito_en_partes_portes.webp','40');
-INSERT INTO film VALUES ('6','Maleficent','Fantasi, Drama','Maleficent adalah sosok peri baik hati yang kemudian berubah menjadi jahat karena kekecewaannya kepada orang yang dicintainya. Sosok peri jahat yang melekat pada Maleficent ternyata masih memiliki sisi baik yaitu ingin melindungi kerajaan Moors dan kasih sayangnya kepada puteri Aurora.','01:38:00',' images.jpg','35');
+INSERT INTO film VALUES ('4','Luca','Drama, Petualangan','Luca Paguro seorang anak laki-laki berusia 13 tahun yang merupakan monster laut muda yang bisa berubah bentuk menjadi manusia saat berada di darat. Luca mengalami musim panas yang tak terlupakan di Portorosso, Riviera Italia bersama sahabat barunya, Alberto Scorfano dan Giulia Marcovaldo. ','01:35:00','luca_34.jpeg','35000');
+INSERT INTO film VALUES ('5','Kimetsu No Yaiba: Mugen Ressha-hen','Fantasi, Anime','Tanjiro Kamado dan adiknya, Nezuko, bergabung dengan Flame Hashira Kyojuro Rengoku, salah satu pendekar terkuat di Demon Slayer Corps, untuk membasmi iblis di atas Kereta Mugen. Namun, mereka terjebak dalam sihir yang membuat mereka tertidur dan masuk ke alam mimpi. ','01:57:00','Kimetsu_no_yaiba_el_trenito_en_partes_portes.webp','40000');
+INSERT INTO film VALUES ('6','Maleficent','Fantasi, Drama','Maleficent adalah sosok peri baik hati yang kemudian berubah menjadi jahat karena kekecewaannya kepada orang yang dicintainya. Sosok peri jahat yang melekat pada Maleficent ternyata masih memiliki sisi baik yaitu ingin melindungi kerajaan Moors dan kasih sayangnya kepada puteri Aurora.','01:38:00','images.jpg','35000');
 
 
 CREATE TABLE `users` (
