@@ -32,6 +32,19 @@
 <body>
 <div class="box-login">
     </div>
+    <div class="backgroun-sign" style ="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('image/Background_login.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: -1;
+    filter : grayscale(1);
+    "></div>
     <div class="border-sign">
     </div>
     <div class="sign-in">
