@@ -16,9 +16,10 @@ $folder = '../image/' .$file_name;
 $judulfilm = $_POST['judul'];
 $durasifilm = $_POST['durasi'];
 $genrefilm = $_POST['genre'];
+$hargatiket = $_POST['harga'];
 $deskripsifilm = $_POST['deskripsi'];
 
-$query = "UPDATE film SET judul = '$judulfilm', genre = '$genrefilm', durasi = '$durasi_film', deskripsi = '$deskripsifilm', poster = '$file_name', WHERE id = '$id'";
+$query = "UPDATE film SET judul = '$judulfilm', genre = '$genrefilm', durasi = '$durasi_film', deskripsi = '$deskripsifilm', harga '$hargatiket',poster = '$file_name', WHERE id = '$id'";
 
 if($connection->query($query)) {
     $_SESSION['alertupdate'] == true;

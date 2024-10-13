@@ -1,178 +1,52 @@
-body {
-  position: relative;
-  width: 1280px;
-  height: 720px;
-  background-color: #799CBF;
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.box-login{
-  position: absolute;
-  width: 536px;
-  height: 377px;
-  left: 372px;
-  top: 145px;
-  background: rgba(217, 217, 217, 0.68);
-  border-radius: 39px;
+/* Button animation */
+.btn {
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.05);
 }
 
-.border-sign {
-  position: absolute;
-  width: 209px;
-  height: 51px;
-  left: 460px;
-  top: 206px;
-
-  background: #316D87;
-  border-radius: 24px;
-  
+/* Header background color */
+.card-header {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.sign-in {
-
-  position: absolute;
-  width: 110px;
-  height: 35px;
-  left: 509px;
-  top: 214px;
-
-  font-family: 'Itim';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 38px;
-
-  color: #FFFFFF;
-
+/* Button styling */
+.btn-success {
+  background-color: #28a745;
+  border: none;
+}
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
 }
 
-.input-username {
-  position: absolute;
-  width: 360px;
-  height: 58px;
-  left: 461px;
-  top: 275px;
-
-  background: #FFFFFF;
-  border-radius: 20px;
-
+/* Form group styling */
+.form-group label {
+  font-weight: bold;
 }
 
-.input-username input{
-  width: 360px;
-  height: 58px;
-  border-radius: 20px;
-  font-size: 18px;
-  font-family: 'Abel';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 32px;
+/* Animation for the container */
+.container {
+  animation: fadeIn 1s ease-in;
 }
-
-.border-password {
-  /* Rectangle 3 */
-
-  position: absolute;
-  width: 360px;
-  height: 53px;
-  left: 461px;
-  top: 367px;
-
-  background: #FFFFFF;
-  border-radius: 20px;
-}
-
-.border-password input{
-  border-radius:20px;
-  width: 360px;
-  height: 53px;
-  font-family: 'Abel';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 32px;
-
-}
-
-.kirim button{
-  position: absolute;
-  width: 359px;
-  height: 39px;
-  left: 460px;
-  top: 441px;
-
-  background: #316D87;
-  border-radius: 25px;
-
-  font-family: 'Itim';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  color: #FFFFFF;
-
-
-}
-
-.caption-signin {
-
-  position: absolute;
-  width: 444px;
-  height: 41px;
-  left: 354px;
-  top: 534px;
-
-  font-family: 'Itim';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 39px;
-  line-height: 47px;
-
-  color: white    ;
-}
-
-.daftar {
-  /* Daftar */
-
-  position: absolute;
-  width: 110px;
-  height: 41px;
-  left: 804px;
-  top: 534px;
-
-  font-family: 'Itim';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 39px;
-  line-height: 47px;
-
-  color: #1D617E;
-
-
-}
-
-.lewati {
-  position: absolute;
-  width: 90px;
-  height: 43px;
-  left: 1070px;
-  top: 42px;
-
-  font-family: 'Bree Serif';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 43px;
-
-  color: #FFFFFF;
-}
-
-.skip {
-
-  position: absolute;
-  width: 48px;
-  height: 48px;
-  left: 1178px;
-  top: 37px;
-
-
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

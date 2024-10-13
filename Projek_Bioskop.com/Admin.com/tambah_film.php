@@ -47,6 +47,11 @@ if (isset($_SESSION['admin']) and $_SESSION['admin'] == true) {
                 </div>
 
                 <div class="form-group">
+                  <label><i class="fa fa-money  "></i> HARGA TIKET</label>
+                  <input type="number" name="harga" placeholder="Masukkan Harga Tiket" class="form-control" required>
+                </div>
+
+                <div class="form-group">
                   <label><i class="fas fa-image"></i> POSTER FILM</label>
                   <input type="file" name="poster" class="form-control-file" required>
                 </div>

@@ -5,10 +5,10 @@ CREATE TABLE `film` (
   `genre` varchar(50) NOT NULL,
   `deskripsi` text NOT NULL,
   `poster` varchar(50) DEFAULT NULL,
+  `harga` int NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO film VALUES ('21','Laskar Pelangi','95','Kebersamaan','Kisah suka duka kehidupan anak-anak murid SD dari keluarga miskin di Desa Belitung. Meski hari-hari mereka selalu dipenuhi tantangan dan keterbatasan, namun hal itu tak menyurutkan tekad mereka untuk tetap bersekolah demi meraih impian dan cita-cita.',' Laskar_Pelangi_film.jpg');
 
 
 CREATE TABLE `users` (

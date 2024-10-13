@@ -61,6 +61,11 @@ $row = mysqli_fetch_array($result);
               </div>
 
               <div class="form-group">
+                <label><i class="fas fa-money"></i> HARGA TIKET</label>
+                <input type="number" name="harga" value="<?php echo $row['harga'] ?>" placeholder="Masukkan Durasi Film" class="form-control">
+              </div>
+
+              <div class="form-group">
                 <label><i class="fas fa-image"></i> POSTER FILM</label>
                 <input type="file" name="poster" value="<?php echo $row['poster'] ?>" class="form-control-file" required>
               </div>

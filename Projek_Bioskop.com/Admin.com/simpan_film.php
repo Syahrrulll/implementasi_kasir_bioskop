@@ -12,13 +12,14 @@ include ("../service/database.php");
 $judulfilm = $_POST['judul'];
 $durasifilm = $_POST['durasi'];
 $genrefilm = $_POST['genre'];
+$hargatiket = $_POST['tiket'];
 $deskripsifilm = $_POST['deskripsi'];
 
 $file_name = $_FILES['poster']['name'];
 $tempname = $_FILES['poster']['tmp_name'];
 $folder = '../image/' .$file_name;
 
-$query = "INSERT INTO film (judul, durasi, genre, poster, deskripsi) VALUES ('$judulfilm', '$durasifilm', '$genrefilm',' $file_name', '$deskripsifilm')";
+$query = "INSERT INTO film (judul, durasi, genre, poster, harga ,deskripsi) VALUES ('$judulfilm', '$durasifilm', '$genrefilm',' $file_name', '$hargatiket' ,'$deskripsifilm')";
 
 if(move_uploaded_file($tempname, $folder)){
     echo "<h2>File Berhasil Di Upload<h2>";
