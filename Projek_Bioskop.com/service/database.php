@@ -9,14 +9,12 @@ $db =  mysqli_connect($hostname, $username, $password);
 
 $check_db = $db->query("SHOW DATABASES LIKE '$database_name'");
 
-if ($check_db->num_rows == 0) {
-
-    if ($db->query("CREATE DATABASE $database_name") === TRUE) {
-        echo "<p class='success'>Database $database_name berhasil dibuat.</p>";
-    } else {
-        echo "<p class= 'error'>Error membuat database: " . $conn->error . "</p>";
-    }
-}
+$create_users_table = "CREATE TABLE IF NOT EXISTS users (
+                id INT PRIMARY KEY AUTO_INCREMENT,
+                nama VARCHAR(255) UNIQUE,
+                password VARCHAR(255),
+                current_add DATE DEFAULT CURRENT_TIMESTAMP
+            )";
 
 $db = mysqli_connect($hostname, $username, $password, $database_name);
 
