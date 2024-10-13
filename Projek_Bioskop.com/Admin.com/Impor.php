@@ -149,7 +149,6 @@
             }
         }
 
-        $conn->close();
         ?>
     </div>
     <div class="button-container">
