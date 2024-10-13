@@ -22,7 +22,7 @@ $query = "UPDATE film SET judul = '$judulfilm', genre = '$genrefilm', durasi = '
 
 if($connection->query($query)) {
     $_SESSION['alertupdate'] == true;
-    header("location: daftar_film.php");
+    header("location: index.php");
 } else {
 
     echo "Data Gagal Diupate!";
