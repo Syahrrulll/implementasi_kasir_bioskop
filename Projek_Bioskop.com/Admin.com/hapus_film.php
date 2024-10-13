@@ -17,7 +17,7 @@ $query = "DELETE FROM film WHERE id = '$id'";
 
 if($db->query($query)) {
     $_SESSION['alertdelete'] = true;
-    header("location: index.php");
+    header("location: Ekspor.php");
 } else {
     echo "DATA GAGAL DIHAPUS!";
 }

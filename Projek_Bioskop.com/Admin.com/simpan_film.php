@@ -29,7 +29,7 @@ else{
 
 if($db->query($query)) {
     $_SESSION['alertsave'] = true;
-    header("location: ../Admin.com");
+    header("location: Ekspor.php");
 
 } else {
 

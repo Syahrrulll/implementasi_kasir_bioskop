@@ -23,8 +23,6 @@ if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true) {
     echo '<script>alert("Berhasil Menghapus Data")</script>';
 }
 
-
-
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -49,6 +47,8 @@ if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true) {
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             border-radius: 12px;
             margin-top: 50px;
+            position: relative;
+            overflow: hidden;
         }
 
         .header {
@@ -60,12 +60,14 @@ if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true) {
             margin: 0;
             color: #333;
             font-size: 2.5em;
+            animation: fadeIn 1s ease-in forwards;
         }
 
         .nav {
             display: flex;
             justify-content: center;
             margin: 20px 0;
+            animation: slideInFromLeft 0.7s ease-out;
         }
 
         .nav a {
@@ -75,11 +77,12 @@ if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true) {
             padding: 12px 24px;
             border-radius: 6px;
             margin: 0 10px;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.3s;
         }
 
         .nav a:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
         }
 
         .content {
@@ -95,15 +98,10 @@ if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true) {
         .content .welcome-icon {
             font-size: 4em;
             color: #6c757d;
-
-
+            animation: bounce 1.5s ease infinite;
         }
 
         /* Animasi zoom-in untuk judul */
-        .header h1 {
-            animation: fadeIn 1s ease-in forwards
-        }
-
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -114,16 +112,7 @@ if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true) {
             }
         }
 
-        .nav {
-            animation: slideInFromLeft 0.7s ease-out;
-        }
-
-        .welcome-icon {
-            animation: bounce 1.5s ease infinite;
-        }
-
         @keyframes bounce {
-
             0%,
             100% {
                 transform: translateY(0);
@@ -131,6 +120,52 @@ if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true) {
 
             50% {
                 transform: translateY(-10px);
+            }
+        }
+
+        /* Elemen dekoratif */
+        .decorative-ornament {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(0, 123, 255, 0.1);
+            border-radius: 50%;
+            animation: float 4s infinite ease-in-out;
+            z-index: -1; /* Di belakang konten */
+        }
+
+        .decorative-ornament:nth-child(1) {
+            top: -50px;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .decorative-ornament:nth-child(2) {
+            bottom: -50px;
+            right: 15%;
+            animation-delay: 1s;
+        }
+
+        .decorative-ornament:nth-child(3) {
+            top: 30%;
+            left: 60%;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: translateY(-20px);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 0.5;
             }
         }
     </style>
@@ -144,13 +179,18 @@ if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true) {
         <div class="nav">
             <a href="tambah_film.php">Tambah Film</a>
             <a href="daftar_film.php">Daftar Film</a>
-            <a href="koneksi_table.php">Buat Table</a>
+            <a href="impor.php">Impor Database</a>
             <a href="../logout.php">Keluar</a>
         </div>
         <div class="content">
             <p class="welcome-icon">🎬</p>
             <p>Selamat datang di halaman Admin! Kelola data film, dan lainnya di sini.</p>
         </div>
+
+        <!-- Elemen dekoratif -->
+        <div class="decorative-ornament"></div>
+        <div class="decorative-ornament"></div>
+        <div class="decorative-ornament"></div>
     </div>
 </body>
 
