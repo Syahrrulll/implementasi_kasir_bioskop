@@ -218,7 +218,7 @@ if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true) {
 <body>
     <div class="container">
         <div class="header">
-            <h1>Admin Panel</h1>
+            <h1>Admin Page</h1>
         </div>
         <div class="nav">
             <a href="tambah_film.php">Tambah Film</a>
@@ -229,7 +229,7 @@ if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true) {
         </div>
         <div class="content">
             <p class="welcome-icon">🎬</p>
-            <p>Selamat datang di halaman Admin! Kelola data film, dan lainnya di sini.</p>
+            <p>Selamat datang di halaman Admin! Kelola data film dan users di sini.</p>
         </div>
 
         <!-- Elemen dekoratif -->
