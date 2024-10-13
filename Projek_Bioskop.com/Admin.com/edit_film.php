@@ -75,7 +75,7 @@ $row = mysqli_fetch_array($result);
                 <textarea class="form-control" name="deskripsi" placeholder="Masukkan Deskripsi Film" rows="4"><?php echo $row['deskripsi'] ?></textarea>
               </div>  
 
-              <div clas="text-center">
+              <div class="text-center">
                 <button type="submit" class="btn btn-success">UPDATE</button>
                 <button type="reset" class="btn btn-warning">RESET</button>
               </div>
