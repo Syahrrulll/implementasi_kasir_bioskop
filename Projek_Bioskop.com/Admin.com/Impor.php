@@ -115,15 +115,24 @@
         } else {
             $backup_file = 'db/bioskop.sql';
             $sql = file_get_contents($backup_file);
-            $queries = explode(';', $sql);
 
+            
+            $sql = str_replace('utf8mb4_0900_ai_ci', 'utf8mb4_unicode_ci', $sql);
+            
+            
+            $queries = explode(';', $sql);
+            
+           
             foreach ($queries as $query) {
                 $query = trim($query);
+            
                 if (!empty($query)) {
+                  
                     if (stripos($query, 'CREATE TABLE') === 0) {
                         if (stripos($query, 'IF NOT EXISTS') === false) {
                             $query = preg_replace('/^CREATE TABLE/i', 'CREATE TABLE IF NOT EXISTS', $query);
                         }
+            
                         if (preg_match('/CREATE TABLE IF NOT EXISTS `?(\w+)`?/i', $query, $matches)) {
                             $table_name = $matches[1];
                             $check_table = $conn->query("SHOW TABLES LIKE '$table_name'");
@@ -147,6 +156,7 @@
                     }
                 }
             }
+            
         }
 
         ?>
