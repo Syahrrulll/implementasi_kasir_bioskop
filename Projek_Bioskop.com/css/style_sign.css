@@ -1,3 +1,4 @@
+/* Gaya umum untuk Sign In dan Sign Up */
 body {
     position: relative;
     width: 1280px;
@@ -5,7 +6,110 @@ body {
     background-color: #799CBF;
 }
 
-.box-login{
+.backgroun-sign {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../image/Background_login.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: grayscale(1);
+    animation: backgroundFade 10s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundFade {
+    from { opacity: 0.2; }
+    to { opacity: 0.5; }
+}
+
+.box-login, .border-sign, .sign-in, .input-username, 
+.border-password, .kirim, .caption-signin, .daftar, .lewati, .skip {
+    animation: fadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+/* Gaya dan animasi untuk lewati dan skip */
+.lewati {
+    position: absolute;
+    width: 90px;
+    height: 43px;
+    left: 1070px;
+    top: 42px;
+    font-family: 'Bree Serif', serif;
+    font-size: 32px;
+    color: #FFFFFF;
+    animation-delay: 1.4s;
+}
+
+.skip {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 1178px;
+    top: 37px;
+    animation-delay: 1.4s;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skip a img {
+    width: 100%;
+    height: 100%;
+}
+
+.skip:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+body {
+    position: relative;
+    width: 1280px;
+    height: 720px;
+    background-color: #799CBF;
+}
+
+.backgroun-sign {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../image/Background_login.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: grayscale(1);
+    animation: backgroundFade 10s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundFade {
+    from { opacity: 0.2; }
+    to { opacity: 0.5; }
+}
+
+.box-login, .border-sign, .sign, .input-username, 
+.border-password, .kirim, .caption-signin, .daftar {
+    animation: fadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.box-login {
     position: absolute;
     width: 536px;
     height: 377px;
@@ -13,6 +117,7 @@ body {
     top: 145px;
     background: rgba(217, 217, 217, 0.68);
     border-radius: 39px;
+    animation-delay: 0.2s;
 }
 
 .border-sign {
@@ -21,28 +126,27 @@ body {
     height: 51px;
     left: 460px;
     top: 206px;
-
     background: #316D87;
     border-radius: 24px;
-    
+    animation-delay: 0.4s;
 }
 
-.sign-in {
-
-    position: absolute;
+.sign {
+    position: relative;
     width: 110px;
     height: 35px;
     left: 509px;
     top: 214px;
-
-    font-family: 'Itim';
-    font-style: normal;
-    font-weight: 400;
+    font-family: 'Itim', sans-serif;
     font-size: 32px;
-    line-height: 38px;
-
     color: #FFFFFF;
+    animation-delay: 0.4s;
 
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
 }
 
 .input-username {
@@ -51,128 +155,90 @@ body {
     height: 58px;
     left: 461px;
     top: 275px;
-
     background: #FFFFFF;
     border-radius: 20px;
-
+    animation-delay: 0.6s;
 }
 
-.input-username input{
+.input-username input, .border-password input {
     width: 360px;
     height: 58px;
     border-radius: 20px;
-    font-size: 18px;
-    font-family: 'Abel';
-    font-style: normal;
-    font-weight: 400;
     font-size: 25px;
-    line-height: 32px;
+    padding-left: 15px;
+    border: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-username input:focus, .border-password input:focus {
+    border: 1px solid #316D87;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
 }
 
 .border-password {
-    /* Rectangle 3 */
-
     position: absolute;
     width: 360px;
     height: 53px;
     left: 461px;
     top: 367px;
-
     background: #FFFFFF;
     border-radius: 20px;
+    animation-delay: 0.8s;
 }
 
-.border-password input{
-    border-radius:20px;
-    width: 360px;
-    height: 53px;
-    font-family: 'Abel';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 32px;
-
-}
-
-.kirim button{
+.kirim button {
     position: absolute;
     width: 359px;
     height: 39px;
     left: 460px;
     top: 441px;
-
     background: #316D87;
     border-radius: 25px;
-
-    font-family: 'Itim';
-    font-style: normal;
-    font-weight: 400;
+    font-family: 'Itim', sans-serif;
     font-size: 20px;
     color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    animation-delay: 1s;
+    transition: background 0.3s, box-shadow 0.3s;
+}
 
+.kirim button:hover {
+    background: #1D617E;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 
+.caption-signin, .daftar {
+    position: absolute;
+    font-family: 'Itim', sans-serif;
+    font-size: 39px;
+    color: white;
+    animation-delay: 1.2s;
 }
 
 .caption-signin {
-
-    position: absolute;
     width: 444px;
     height: 41px;
     left: 354px;
     top: 534px;
-
-    font-family: 'Itim';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 39px;
-    line-height: 47px;
-
-    color: white    ;
 }
 
 .daftar {
-    /* Daftar */
-
-    position: absolute;
     width: 110px;
     height: 41px;
     left: 804px;
     top: 534px;
-
-    font-family: 'Itim';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 39px;
-    line-height: 47px;
-
     color: #1D617E;
-
-
 }
 
-.lewati {
-    position: absolute;
-    width: 90px;
-    height: 43px;
-    left: 1070px;
-    top: 42px;
-
-    font-family: 'Bree Serif';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 43px;
-
-    color: #FFFFFF;
-}
-
-.skip {
-
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    left: 1178px;
-    top: 37px;
-
-
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

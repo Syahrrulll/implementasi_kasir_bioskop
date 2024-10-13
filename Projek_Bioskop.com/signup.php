@@ -47,7 +47,7 @@
     "></div>
     <div class="border-sign">
     </div>
-    <div class="sign-in">
+    <div class="sign">
         Sign Up
     </div>
 
