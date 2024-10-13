@@ -42,7 +42,7 @@ $row = mysqli_fetch_array($result);
             EDIT FILM
           </div>
           <div class="card-body">
-            <form action="update_film.php" method="POST">
+            <form enctype="multipart/form-data" action="update_film.php" method="POST">
 
               <div class="form-group">
                 <label><i class="fas fa-edit"></i> JUDUL FILM</label>
@@ -67,13 +67,13 @@ $row = mysqli_fetch_array($result);
 
               <div class="form-group">
                 <label><i class="fas fa-image"></i> POSTER FILM</label>
-                <input type="file" name="poster" value="<?php echo $row['poster'] ?>" class="form-control-file" required>
+                <input type="file" name="poster" value="<?php echo $row['poster'] ?>" class="form-control-file">
               </div>
 
               <div class="form-group">
                 <label><i class="fas fa-align-left"></i> DESKRIPSI FILM</label>
                 <textarea class="form-control" name="deskripsi" placeholder="Masukkan Deskripsi Film" rows="4"><?php echo $row['deskripsi'] ?></textarea>
-              </div>
+              </div>  
 
               <div clas="text-center">
                 <button type="submit" class="btn btn-success">UPDATE</button>

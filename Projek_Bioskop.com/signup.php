@@ -48,7 +48,7 @@
     <div class="border-sign">
     </div>
     <div class="sign">
-        Sign Up
+        SignUp
     </div>
 
     <form action="signup.php" method="POST">

@@ -6,8 +6,9 @@ if (isset($_SESSION['admin']) and $_SESSION['admin'] == true) {
     header('location: ../../Projek_Bioskop.com');
 }
 
-session_start();
 include "../service/database.php";
+
+$id = $_POST['id'];
 
 $file_name = $_FILES['poster']['name'];
 $tempname = $_FILES['poster']['tmp_name'];
@@ -19,9 +20,9 @@ $genrefilm = $_POST['genre'];
 $hargatiket = $_POST['harga'];
 $deskripsifilm = $_POST['deskripsi'];
 
-$query = "UPDATE film SET judul = '$judulfilm', genre = '$genrefilm', durasi = '$durasi_film', deskripsi = '$deskripsifilm', harga '$hargatiket',poster = '$file_name', WHERE id = '$id'";
+$query = "UPDATE film SET judul = '$judulfilm', genre = '$genrefilm', durasi = '$durasifilm', deskripsi = '$deskripsifilm', harga = '$hargatiket', poster = '$file_name' WHERE id = '$id'";
 
-if($connection->query($query)) {
+if($db->query($query)) {
     $_SESSION['alertupdate'] == true;
     header("location: Ekspor.php");
 } else {
