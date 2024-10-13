@@ -262,7 +262,8 @@ body {
 @keyframes scroll {
     0% {
         transform: translateX(50%);
-    }0%{
+    }
+    100%{
    transform: translateX(calc(-250px * 11));
     }    
 }
