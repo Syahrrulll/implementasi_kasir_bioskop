@@ -1,16 +1,16 @@
 CREATE TABLE `film` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `judul` varchar(50) NOT NULL,
-  `durasi` varchar(50) DEFAULT NULL,
-  `genre` varchar(50) NOT NULL,
-  `deskripsi` text NOT NULL,
-  `poster` varchar(50) DEFAULT NULL,
+  `judul` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `durasi` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `genre` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deskripsi` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `poster` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `harga` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO film VALUES ('4','Luca','Drama, Petualangan','Luca Paguro seorang anak laki-laki berusia 13 tahu','01:35:00',' luca_34.jpeg','35000');
-INSERT INTO film VALUES ('5','Kimetsu No Yaiba: Mugen Ressha-hen','Fantasi, Anime','Tanjiro Kamado dan adiknya, Nezuko, bergabung deng','01:57:00',' Kimetsu_no_yaiba_el_trenito_en_partes_portes.webp','40');
+INSERT INTO film VALUES ('4','Luca','135','Drama, Petualangan','Luca Paguro seorang anak laki-laki berusia 13 tahun yang menyamar sebagai manusia, bersama sahabat barunya Alberto Scorfano dan Giulia Marcovaldo. Luca memiliki kemampuan untuk berubah bentuk menjadi manusia saat berada di darat.','luca_34.jpeg','35000');
+INSERT INTO film VALUES ('5','Kimetsu No Yaiba: Mugen Ressha-hen','157','Fantasi, Anime','Tanjiro Kamado, bergabung dengan Inosuke Hashibira, seorang anak laki-laki yang dibesarkan oleh babi hutan yang memakai kepala babi hutan, dan Zenitsu Agatsuma, seorang anak laki-laki ketakutan yang mengeluarkan kekuatan sejatinya ketika dia tidur, di dalam Kereta Infinity dalam misi baru dengan seorang Pilar Api, Kyojuro Rengoku , Untuk mengalahkan iblis yang telah menyiksa orang-orang dan membunuh pembunuh iblis yang menentangnya.','Kimetsu_no_yaiba_el_trenito_en_partes_portes.webp','40000');
 INSERT INTO film VALUES ('6','Maleficent','Fantasi, Drama','Maleficent adalah sosok peri baik hati yang kemudi','01:38:00',' images.jpg','35');
 INSERT INTO film VALUES ('24','Deadpool & Wolverine','128','Action, Adventure, Comedy','Deadpool ditawari tempat di Marvel Cinematic Universe oleh Otoritas Variasi Waktu, tetapi malah merekrut varian Wolverine untuk menyelamatkan alam semesta dari kepunahan.',' film-deadpool-wolverine-2024-.jpg','40000');
 INSERT INTO film VALUES ('25','Alien: Romulus','112','Horror, Sci-fi, Thriller',' Saat mengais-ngais bagian dalam stasiun luar angkasa yang terbengkalai, sekelompok penjajah ruang angkasa muda berhadapan langsung dengan bentuk kehidupan yang paling mengerikan di alam semesta.',' film-alien-romulus-2024.jpg','40000');
@@ -43,18 +43,17 @@ INSERT INTO film VALUES ('50','Saving Bikini Vottom: The Sandy Cheeks Movie','82
 
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) NOT NULL,
+  `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `created_add` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_add` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO users VALUES ('1','arul','123','2024-10-06 15:19:41');
+INSERT INTO users VALUES ('1','Admin','pass123','2024-10-11 12:02:09');
+INSERT INTO users VALUES ('2','icha','123','2024-10-11 12:03:22');
 INSERT INTO users VALUES ('3','jule','123','2024-10-11 12:35:06');
 INSERT INTO users VALUES ('4','naya','123','2024-10-11 12:39:45');
-INSERT INTO users VALUES ('6','Admin','pass123','2024-10-06 16:13:07');
-INSERT INTO users VALUES ('7','icha','123','2024-10-06 21:21:51');
 INSERT INTO users VALUES ('8','syahrull','123','2024-10-06 21:22:04');
 INSERT INTO users VALUES ('9','julee','123','2024-10-12 19:44:10');
 INSERT INTO users VALUES ('15','pae','yahaha','2024-10-06 21:23:42');
