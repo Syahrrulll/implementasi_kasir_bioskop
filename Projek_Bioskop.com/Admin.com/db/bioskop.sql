@@ -7,7 +7,7 @@ CREATE TABLE `film` (
   `poster` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `harga` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO film VALUES ('4','Luca','135','Drama, Petualangan','Luca Paguro seorang anak laki-laki berusia 13 tahun yang menyamar sebagai manusia, bersama sahabat barunya Alberto Scorfano dan Giulia Marcovaldo. Luca memiliki kemampuan untuk berubah bentuk menjadi manusia saat berada di darat.','luca_34.jpeg','35000');
 INSERT INTO film VALUES ('5','Kimetsu No Yaiba: Mugen Ressha-hen','157','Fantasi, Anime','Tanjiro Kamado, bergabung dengan Inosuke Hashibira, seorang anak laki-laki yang dibesarkan oleh babi hutan yang memakai kepala babi hutan, dan Zenitsu Agatsuma, seorang anak laki-laki ketakutan yang mengeluarkan kekuatan sejatinya ketika dia tidur, di dalam Kereta Infinity dalam misi baru dengan seorang Pilar Api, Kyojuro Rengoku , Untuk mengalahkan iblis yang telah menyiksa orang-orang dan membunuh pembunuh iblis yang menentangnya.','Kimetsu_no_yaiba_el_trenito_en_partes_portes.webp','40000');
@@ -41,6 +41,7 @@ INSERT INTO film VALUES ('49','The Goat Life','171','Adventure, Drama','Seorang 
 INSERT INTO film VALUES ('50','Saving Bikini Vottom: The Sandy Cheeks Movie','82','Comedy, Advanture','Saving Bikini Bottom: The Sandy Cheeks Movie adalah sebuah film animasi Amerika Serikat tahun 2024 yang disutradarai oleh Liza Johnson. Film tersebut dirilis pada 2 Agustus 2024. Carolyn Lawrence dan Tom Kenny masing-masing menjadi pengisi suara Sandy Cheeks dan SpongeBob SquarePants.',' savingbikinibottom.jpeg','40000');
 INSERT INTO film VALUES ('51','Arcane','52','Fiksi ilmiah, ','Di tengah perselisihan tajam antar sepasang kota kembar, Piltover dan Zaun, dua saudari bertempur sebagai musuh dalam perang antara teknologi sihir dan konflik keyakinan.',' Arcane_-_poster_29.webp','30000');
 INSERT INTO film VALUES ('52','Encanto','109','Musik, Comedy, Fantasi','Encanto film disney yang mengisahkan keluarga Madrigal yang tinggal di rumah ajaib di Kolombia. Setiap anggota keluarga memiliki kekuatan magis kecuali Mirabel, yang akhirnya harus menyelamatkan keajaiban keluarganya saat kekuatan mereka mulai menghilang. Film ini menonjolkan tema penerimaan diri dan cinta keluarga, dengan musik khas Amerika Latin oleh Lin-Manuel Miranda. Encanto memenangkan Academy Award untuk Film Animasi Terbaik.',' disney-encanto.jpg','40000');
+INSERT INTO film VALUES ('53','Raya and The Last Dragon','107','Animasi, Family, Comedy, Fantasi, Musical, Laga','Raya and the Last Dragon adalah Film yang berlatar di dunia fantasi Kumandra, di mana manusia dan naga pernah hidup berdampingan. Ceritanya mengikuti Raya, seorang pejuang muda yang berusaha menemukan naga terakhir, Sisu, untuk menyelamatkan tanahnya dari ancaman kegelapan yang disebut Druun. Dalam perjalanannya, Raya harus belajar mempercayai orang lain untuk mempersatukan kembali kerajaan yang terpecah. Film ini menonjolkan tema persatuan, kepercayaan, dan pengorbanan, dengan visual yang memukau dan budaya yang terinspirasi dari Asia Tenggara.',' Raya and The Last Dragon.jpg','40000');
 
 
 CREATE TABLE `users` (
