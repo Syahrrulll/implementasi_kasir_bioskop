@@ -6,7 +6,7 @@ if (isset($_SESSION['admin']) and $_SESSION['admin'] == true) {
     header('location: ../../Projek_Bioskop.com');
 }
 
-session_start();
+
 include ("../service/database.php");
 
 $judulfilm = $_POST['judul'];

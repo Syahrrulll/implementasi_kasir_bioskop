@@ -45,6 +45,18 @@ INSERT INTO film VALUES ('53','Raya and The Last Dragon','107','Animasi, Family,
 INSERT INTO film VALUES ('54','Mencuri Raden Saleh','154','Laga, Comedy,Petualangan','Mencuri Raden Saleh adalah Film yang bercerita tentang sekelompok anak muda yang merencanakan pencurian besar untuk mencuri lukisan karya pelukis legendaris Raden Saleh dari istana presiden. Dipimpin oleh Piko, seorang pemalsu lukisan, kelompok ini terdiri dari ahli dengan keahlian berbeda-beda, seperti peretas, pembalap, dan petarung. Misi mereka penuh dengan ketegangan dan bahaya, karena melibatkan intrik politik dan pengkhianatan. Film ini menggabungkan aksi seru dengan elemen drama dan menampilkan sinematografi yang kuat serta tema persahabatan dan keberanian.',' Mencuri Raden Saleh.jpg','40000');
 
 
+CREATE TABLE `jadwal` (
+  `id_jadwal` int NOT NULL AUTO_INCREMENT,
+  `jam_tayang` time DEFAULT NULL,
+  `jam_berakhir` time DEFAULT NULL,
+  `hari` varchar(15) DEFAULT NULL,
+  `id_film` int DEFAULT NULL,
+  PRIMARY KEY (`id_jadwal`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO jadwal VALUES ('2','21:36:00','22:36:00','Rabu','29');
+
+
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
