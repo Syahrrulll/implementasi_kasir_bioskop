@@ -213,13 +213,21 @@ body {
     gap: 4rem;
     margin-top:700px;
     border-radius: 10px;
-    padding:15px;
+    padding:50px;
     animation: scroll 40s linear infinite;
-    perspective: 200px;
+    margin-bottom: 20px;
+}
+
+.Daftar_Film img{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .Daftar_Film:hover {
     animation-play-state : paused;
+
+}
+.Daftar_Film img:hover{
+    transform: scale(1.2);
 }
 
 @keyframes scroll {

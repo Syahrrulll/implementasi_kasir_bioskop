@@ -92,7 +92,7 @@ $_SESSION['admin'] = false;
                   while($row = mysqli_fetch_array($query)){
                 ?>
 
-            <div class="Item"><<img src="image/<?php echo ltrim($row['poster'])?>"></div>
+            <div class="Item"><img src="image/<?php echo ltrim($row['poster'])?>"></div>
             <?php }?>
         </div>
     </div>
