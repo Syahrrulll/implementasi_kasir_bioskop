@@ -216,7 +216,6 @@ body {
     padding:15px;
     animation: scroll 40s linear infinite;
     perspective: 200px;
-    margin-left: 45%;
 }
 
 .Daftar_Film:hover {
@@ -225,7 +224,7 @@ body {
 
 @keyframes scroll {
     0% {
-        transform: translateX(50%);
+        transform: translateX(15%);
     }
     100%{
         transform: translateX(calc(-250px * 11));

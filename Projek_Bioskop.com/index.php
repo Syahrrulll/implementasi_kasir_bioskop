@@ -85,13 +85,15 @@ $_SESSION['admin'] = false;
 
     <div class="horizontal-scroll">
         <div class="Daftar_Film">
-            <div class="Item"><img src="image/frame1.png"></div>
-            <div class="Item"><img src="image/Frame2.png"></div>
-            <div class="Item"><img src="image/frame3.png"></div>
-            <div class="Item"><img src="image/frame4.png"></div>
-            <div class="Item"><img src="image/frame5.jpg"></div>
-            <div class="Item"><img src="image/frame6.jpg"></div>
-            <div class="Item"><img src="image/frame7.jpeg"></div>
+        <?php 
+                  include('service/database.php');
+                  $no = 1;
+                  $query = mysqli_query($db,"SELECT * FROM film");
+                  while($row = mysqli_fetch_array($query)){
+                ?>
+
+            <div class="Item"><<img src="image/<?php echo ltrim($row['poster'])?>"></div>
+            <?php }?>
         </div>
     </div>
 
