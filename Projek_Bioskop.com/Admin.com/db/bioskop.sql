@@ -53,7 +53,11 @@ CREATE TABLE `jadwal` (
   `hari` varchar(15) DEFAULT NULL,
   `id_film` int DEFAULT NULL,
   PRIMARY KEY (`id_jadwal`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+>>>>>>> 734390b99fa2409819f8e2881de80120f9f21797
 
 INSERT INTO jadwal VALUES ('2','21:36:00','22:36:00','Rabu','29');
 INSERT INTO jadwal VALUES ('3','22:00:00','09:00:00','Senin','38');
@@ -62,7 +66,11 @@ INSERT INTO jadwal VALUES ('5','20:00:00','21:47:00','Kamis','53');
 INSERT INTO jadwal VALUES ('6','13:00:00','15:34:00','Sabtu','54');
 INSERT INTO jadwal VALUES ('7','15:30:00','17:06:00','Jumat','27');
 INSERT INTO jadwal VALUES ('8','20:00:00','21:47:00','Minggu','55');
+<<<<<<< HEAD
 INSERT INTO jadwal VALUES ('9','01:30:00','15:40:00','Senin','31');
+=======
+INSERT INTO jadwal VALUES ('9','16:00:00','17:38:00','Senin','6');
+>>>>>>> 734390b99fa2409819f8e2881de80120f9f21797
 
 
 CREATE TABLE `users` (
