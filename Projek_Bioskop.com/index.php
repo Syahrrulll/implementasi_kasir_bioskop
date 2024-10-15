@@ -51,7 +51,7 @@ $_SESSION['admin'] = false;
         
         <div class="navibar">
             <a href="./">Beranda</a>
-            <a href="Jadwal.php">Jadwal</a>
+            <a href="jadwal.php?day=Senin">Jadwal</a>
             
         </div>
     <?php

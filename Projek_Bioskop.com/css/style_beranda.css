@@ -113,57 +113,6 @@ body {
     text-align: center;
 }
 
-.sign_up {
-    position: absolute;
-    width: 128px;
-    height: 51px;
-    right:50px;
-    top: 33px;
-
-    background: #D9D9D9;
-    border-radius: 24px;
-}
-
-.btn_signup{
-    position: absolute;
-    width: 91px;
-    height: 42px;
-    right:50px;
-    top: 45px;
-
-    font-family: 'Bree Serif';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-
-    color: #000000;
-}
-
-.sign_in {
-    position: absolute;
-    width: 128px;
-    height: 46px;
-    right: 50px;
-    top: 87px;
-
-    background: #D9D9D9;
-    border-radius: 24px;
-    }
-
-.btn_signin {
-    position: absolute;
-    width: 67px;
-    height: 26px;
-    right: 74px;
-    top: 97px;
-    font-family: 'Bree Serif';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #000000;
-}
 .image {
     display : flex;
     width : 100%;

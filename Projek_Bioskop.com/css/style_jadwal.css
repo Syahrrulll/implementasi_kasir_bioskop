@@ -1,64 +1,76 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
 
 header {
-    background-color: #1e1e1e;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 60px 0;
+    background-image: url(../image/bg_jadwal.png);
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.days-nav {
     display: flex;
-    justify-content: center;
-    background-color: #ccc;
+    justify-content: space-around;
+    background-color: #ddd;
+    padding: 10px 0;
 }
 
-nav ul li {
-    margin: 0 1rem;
+.days-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
 }
 
-nav ul li a {
+.days-nav ul li a {
     text-decoration: none;
     color: black;
     font-weight: bold;
+    padding: 10px 20px;
 }
 
-.main {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.days-nav ul li a:hover {
+    background-color: #b0b0b0;
 }
 
-.movie-grid {
+.schedule-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    padding: 1rem;
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
 }
 
-.movie-poster img {
-    width: 240px;
-    height: 369px;
-
-    border-radius: 5px;
+.schedule-card img {
+    width: 200px;
+    height: 280px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    background-color: #ccc;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.1);
 }
 
-.footer-icons img {
-    width: 30px;
-    margin: 0 1rem;
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
 }
+
+.bottom-nav a img {
+    width: 30px;
+    height: 30px;
+}
+
