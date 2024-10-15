@@ -48,12 +48,6 @@ $_SESSION['admin'] = false;
         <div class="batas_header">
             </div>
         </div>
-        
-        <div class="navibar">
-            <a href="./">Beranda</a>
-            <a href="jadwal.php?day=Senin">Jadwal</a>
-            
-        </div>
     <?php
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
@@ -102,9 +96,12 @@ $_SESSION['admin'] = false;
     </div>
 
 
-    <div class="footer">
-        @Kelompok 14
-    </div>
+    <footer>
+        <nav class="bottom-nav">
+            <a href="./"><img src="home_icon.png" alt="Beranda"></a>
+            <a href="jadwal.php?day=Senin"><img src="jadwal_icon.png" alt="Jadwal"></a>
+        </nav>
+    </footer>
 </body>
 
 </html>
