@@ -43,12 +43,18 @@ $query = mysqli_query($db, "SELECT * FROM film INNER JOIN jadwal ON film.id = ja
         <div class="schedule-card">
 
             <?php
-    while ($row = mysqli_fetch_array($query)){
-        if($hari == $row['hari']){?>
-            <img src="image/<?php echo ltrim($row['poster'])?>" alt="Poster">;
+        while ($row = mysqli_fetch_array($query)){
+            if($hari == $row['hari']){?>
+
+            <img src="image/<?php echo ltrim($row['poster'])?>" alt="Poster">
+            <div class="waktu-film">
+                <?php echo "Waktu Mulai     : ".$row['jam_tayang']?><br>
+                <?php echo "Waktu Berakhir  : ".$row['jam_berakhir']?>
+            </div>
+        </div>
             <?php }
+            
     } ?>
-    </div>
     </main>
 
     <footer>

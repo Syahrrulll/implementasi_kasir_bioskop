@@ -48,6 +48,10 @@ header {
     justify-items: center;
 }
 
+.waktu-film {
+    text-align:center;
+}
+
 .schedule-card img {
     width: 200px;
     height: 280px;
