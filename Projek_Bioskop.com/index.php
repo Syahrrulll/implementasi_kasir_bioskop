@@ -98,8 +98,8 @@ $_SESSION['admin'] = false;
 
     <footer>
         <nav class="bottom-nav">
-            <a href="./"><img src="home_icon.png" alt="Beranda"></a>
-            <a href="jadwal.php?day=Senin"><img src="jadwal_icon.png" alt="Jadwal"></a>
+            <a href="./"><img src="image/Home.png" alt="Beranda"></a>
+            <a href="jadwal.php?day=Senin"><img src="image/jadwal_icon.png" alt="Jadwal"></a>
         </nav>
     </footer>
 </body>
