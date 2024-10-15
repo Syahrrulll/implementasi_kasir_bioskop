@@ -52,11 +52,12 @@ CREATE TABLE `jadwal` (
   `hari` varchar(15) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `id_film` int DEFAULT NULL,
   PRIMARY KEY (`id_jadwal`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO jadwal VALUES ('2','21:36:00','22:36:00','Rabu','29');
 INSERT INTO jadwal VALUES ('3','22:00:00','09:00:00','Senin','38');
 INSERT INTO jadwal VALUES ('4','15:30:00','17:19:00','Selasa','52');
+INSERT INTO jadwal VALUES ('5','20:00:00','21:47:00','Kamis','53');
 
 
 CREATE TABLE `users` (
