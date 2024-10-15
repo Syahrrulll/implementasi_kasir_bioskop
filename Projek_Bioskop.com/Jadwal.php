@@ -20,13 +20,14 @@ $query = mysqli_query($db, "SELECT * FROM film INNER JOIN jadwal ON film.id = ja
     <header>
         <h1>JADWAL BIOSKOP KEBIN</h1>
     </header>
-    <?php
+    <?php 
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-        include 'layout/logout.html';
-    } else {
-        include 'layout/guest.html';
+    } else { 
+    $_SESSION['alert'] = true;
+    header("location: signin.php");
     }
-    ?>
+
+                        ?>
     <nav class="days-nav">
         <ul>
             <li><a href="jadwal.php?day=Senin">Senin</a></li>

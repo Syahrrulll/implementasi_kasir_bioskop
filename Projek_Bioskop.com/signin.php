@@ -28,19 +28,24 @@
             echo '<script>alert("Akun Tidak Ada")</script>';
         }
 
+        
     }
-
-?>
+    
+    ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scle=1.0">
-    <link rel="stylesheet" href="css/style_sign.css">
-    <title>Sign In</title>
-</head>
-<body>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scle=1.0">
+        <link rel="stylesheet" href="css/style_sign.css">
+        <title>Sign In</title>
+    </head>
+    <body>
+        <?php
+        if(isset($_SESSION['alertjadwal']) and $_SESSION['alertjadwal'] == true){
+            echo '<script>alert("HARAP MASUK TERLEBIH DAHULU UNTUK MELIHAT JADWAL")</script>';
+        
+        }?>
     <div class="backgroun-sign" style ="
     position: fixed;
     top: 0;
