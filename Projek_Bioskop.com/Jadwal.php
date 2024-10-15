@@ -4,7 +4,6 @@ include 'service/database.php';
 $hari = isset($_GET['day']) ? $_GET['day'] : 'senin';
 
 $query = mysqli_query($db, "SELECT * FROM film INNER JOIN jadwal ON film.id = jadwal.id_film");
-
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +22,6 @@ $query = mysqli_query($db, "SELECT * FROM film INNER JOIN jadwal ON film.id = ja
     </header>
     <?php
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-
         include 'layout/logout.html';
     } else {
         include 'layout/guest.html';
@@ -40,50 +38,46 @@ $query = mysqli_query($db, "SELECT * FROM film INNER JOIN jadwal ON film.id = ja
             <li><a href="jadwal.php?day=Minggu">Minggu</a></li>
         </ul>
     </nav>
-    <div class="display-film">
-
-    </div>
+    <div class="display-film"></div>
     <main class="schedule-grid">
         <div class="schedule-card">
-
             <?php
             while ($row = mysqli_fetch_array($query)) {
-                if ($hari == $row['hari']) { ?>
-                    <label for="modal-toggle">
-                        <img src="image/<?php echo ltrim($row['poster']) ?>" alt="Poster">
-                    </label>
-                    <div class="waktu-film">
-                        <?php echo "Waktu Mulai     : " . $row['jam_tayang'] ?><br>
-                        <?php echo "Waktu Berakhir  : " . $row['jam_berakhir'] ?>
+                if ($hari == $row['hari']) {
+                    $filmId = $row['id'];
+                    ?>
+                    <div class="film-item">
+                        <a href="#modal-<?php echo $filmId; ?>">
+                            <img src="image/<?php echo ltrim($row['poster']) ?>" alt="Poster" class="film-poster">
+                        </a>
+                        <p><?php echo "Waktu Mulai     : " . $row['jam_tayang'] ?></p>
+                        <p><?php echo "Waktu Berakhir  : " . $row['jam_berakhir'] ?></p>
                     </div>
-                    <input type="checkbox" id="modal-toggle" class="modal-toggle">
-                    <div class="modal">
+
+                    <div id="modal-<?php echo $filmId; ?>" class="modal">
                         <div class="modal-content">
                             <div class="poster">
                                 <img src="image/<?php echo ltrim($row['poster']) ?>" alt="Poster">
-                    
                             </div>
                             <div class="details">
-                                <h1><?php echo $row['judul']?></h1>
-                                <h3>Sinopsis: </h3>
-                                <p><?php echo $row['deskripsi']?></p>
+                                <h1><?php echo $row['judul'] ?></h1>
+                                <h3>Sinopsis:</h3>
+                                <p><?php echo $row['deskripsi'] ?></p>
                                 <div class="info">
-                                    <p><strong>Durasi       :</strong> <?php echo $row['durasi']?> menit</p>
-                                    <p><strong>Genre        :</strong> <?php echo $row['genre']?></p>
-                                    <p><strong>Harga        :</strong> Rp.<?php echo $row['harga']?></p>
-                                    <p><strong>Jam Mulai    :</strong> <?php echo $row['jam_tayang']?></p>
-                                    <p><strong>Jam Berakhir :</strong> <?php echo $row['jam_berakhir']?></p>
+                                    <p><strong>Durasi:</strong> <?php echo $row['durasi'] ?> menit</p>
+                                    <p><strong>Genre:</strong> <?php echo $row['genre'] ?></p>
+                                    <p><strong>Harga:</strong> Rp.<?php echo $row['harga'] ?></p>
+                                    <p><strong>Jam Mulai:</strong> <?php echo $row['jam_tayang'] ?></p>
+                                    <p><strong>Jam Berakhir:</strong> <?php echo $row['jam_berakhir'] ?></p>
                                 </div>
-
+                                <a href="#" class="back-button">Kembali</a>
                             </div>
-                            <a href="" class="back-button">Kembali</a>
                         </div>
                     </div>
             <?php }
             } ?>
+        </div>
     </main>
-
-
 
     <footer>
         <nav class="bottom-nav">

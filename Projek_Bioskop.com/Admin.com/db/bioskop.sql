@@ -50,10 +50,10 @@ CREATE TABLE `jadwal` (
   `id_jadwal` int NOT NULL AUTO_INCREMENT,
   `jam_tayang` time DEFAULT NULL,
   `jam_berakhir` time DEFAULT NULL,
-  `hari` varchar(15) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `hari` varchar(15) DEFAULT NULL,
   `id_film` int DEFAULT NULL,
   PRIMARY KEY (`id_jadwal`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 INSERT INTO jadwal VALUES ('2','21:36:00','22:36:00','Rabu','29');
 INSERT INTO jadwal VALUES ('3','22:00:00','09:00:00','Senin','38');
@@ -62,21 +62,23 @@ INSERT INTO jadwal VALUES ('5','20:00:00','21:47:00','Kamis','53');
 INSERT INTO jadwal VALUES ('6','13:00:00','15:34:00','Sabtu','54');
 INSERT INTO jadwal VALUES ('7','15:30:00','17:06:00','Jumat','27');
 INSERT INTO jadwal VALUES ('8','20:00:00','21:47:00','Minggu','55');
+INSERT INTO jadwal VALUES ('9','01:30:00','15:40:00','Senin','31');
 
 
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) NOT NULL,
+  `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `created_add` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO users VALUES ('1','Admin','pass123','2024-10-11 12:02:09');
-INSERT INTO users VALUES ('2','icha','123','2024-10-11 12:03:22');
+INSERT INTO users VALUES ('1','arul','123','2024-10-06 15:19:41');
 INSERT INTO users VALUES ('3','jule','123','2024-10-11 12:35:06');
 INSERT INTO users VALUES ('4','naya','123','2024-10-11 12:39:45');
+INSERT INTO users VALUES ('6','Admin','pass123','2024-10-06 16:13:07');
+INSERT INTO users VALUES ('7','icha','123','2024-10-06 21:21:51');
 INSERT INTO users VALUES ('8','syahrull','123','2024-10-06 21:22:04');
 INSERT INTO users VALUES ('9','julee','123','2024-10-12 19:44:10');
 INSERT INTO users VALUES ('15','pae','yahaha','2024-10-06 21:23:42');
