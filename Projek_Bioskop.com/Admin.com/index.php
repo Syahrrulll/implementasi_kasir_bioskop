@@ -13,9 +13,7 @@ if (isset($_SESSION['admin']) and $_SESSION['admin'] == true) {
 }
 
 if (isset($_SESSION['sync']) and $_SESSION['sync'] == true){
-    $hostname = 'localhost';
-    $username = 'root';
-    $password = '';
+    include "../service/database.php";
 
     $db = new mysqli($hostname, $username, $password);
 
