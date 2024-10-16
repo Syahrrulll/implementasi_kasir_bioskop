@@ -44,6 +44,7 @@
         <?php
         if(isset($_SESSION['alertjadwal']) and $_SESSION['alertjadwal'] == true){
             echo '<script>alert("HARAP MASUK TERLEBIH DAHULU UNTUK MELIHAT JADWAL")</script>';
+            $_SESSION['alertjadwal'] = false;
         
         }?>
     <div class="backgroun-sign" style ="
