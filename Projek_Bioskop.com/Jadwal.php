@@ -4,6 +4,14 @@ include 'service/database.php';
 $hari = isset($_GET['day']) ? $_GET['day'] : 'senin';
 
 $query = mysqli_query($db, "SELECT * FROM film INNER JOIN jadwal ON film.id = jadwal.id_film");
+
+
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+} else { 
+$_SESSION['alertjadwal'] = true;
+header("location: signin.php");
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -20,12 +28,7 @@ $query = mysqli_query($db, "SELECT * FROM film INNER JOIN jadwal ON film.id = ja
     <header>
         <h1>JADWAL BIOSKOP KEBIN</h1>
     </header>
-    <?php 
-    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-    } else { 
-    $_SESSION['alert'] = true;
-    header("location: signin.php");
-    }
+
 
                         ?>
     <nav class="days-nav">
