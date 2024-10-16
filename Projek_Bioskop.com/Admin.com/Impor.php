@@ -1,10 +1,10 @@
 <?php
 session_start();
-if (isset($_SESSION['admin']) and $_SESSION['admin'] == true) {
-} else {
-    $_SESSION['alertadmin']  = true;
-    header('location: ../../Projek_Bioskop.com');
-}
+// if (isset($_SESSION['admin']) and $_SESSION['admin'] == true) {
+// } else {
+//     $_SESSION['alertadmin']  = true;
+//     header('location: ../../Projek_Bioskop.com');
+// }
 
 ?>
 

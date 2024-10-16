@@ -13,45 +13,63 @@ if (isset($_SESSION['admin']) and $_SESSION['admin'] == true) {
 }
 
 if (isset($_SESSION['sync']) and $_SESSION['sync'] == true){
-    include "../service/database.php";
-    $conn = new mysqli($hostname, $username, $password, $database_name);
+    $hostname = 'localhost';
+    $username = 'root';
+    $password = '';
 
-    if ($conn->connect_error) {
+    $db = new mysqli($hostname, $username, $password);
+
+    if ($db->connect_error) {
+        echo "<p class='error'>Koneksi gagal: " . $db->connect_error . "</p>";
     } else {
+
+        $query = "DROP DATABASE bioskop;";
+        if($db->query($query)) {}else{}
+
+        $dbName = "bioskop";
+        $dbCheckQuery = "SHOW DATABASES LIKE '$dbName'";
+        $result = $db->query($dbCheckQuery);
+
+        if ($result->num_rows == 0) {
+            $createDbQuery = "CREATE DATABASE $dbName";
+            if ($db->query($createDbQuery) === TRUE) {} else {}} else {}
+        $db = mysqli_connect($hostname, $username, $password, $dbName   );
         $backup_file = 'db/bioskop.sql';
         $sql = file_get_contents($backup_file);
 
-        
+
         $sql = str_replace('utf8mb4_0900_ai_ci', 'utf8mb4_unicode_ci', $sql);
-        
-        
+
+
         $queries = explode(';', $sql);
-        
-       
+
+
         foreach ($queries as $query) {
             $query = trim($query);
-        
+
             if (!empty($query)) {
-              
+
                 if (stripos($query, 'CREATE TABLE') === 0) {
                     if (stripos($query, 'IF NOT EXISTS') === false) {
                         $query = preg_replace('/^CREATE TABLE/i', 'CREATE TABLE IF NOT EXISTS', $query);
                     }
-        
+
                     if (preg_match('/CREATE TABLE IF NOT EXISTS `?(\w+)`?/i', $query, $matches)) {
                         $table_name = $matches[1];
-                        $check_table = $conn->query("SHOW TABLES LIKE '$table_name'");
+                        $check_table = $db->query("SHOW TABLES LIKE '$table_name'");
                         if ($check_table->num_rows === 0) {
-                        }
+                            if ($db->query($query) === TRUE) {} else {}} else {}
+
+                        
                     }
                 } else {
                     $query = preg_replace('/^INSERT INTO/i', 'INSERT IGNORE INTO', $query);
+                    if ($db->query($query) === TRUE) {} else {}
                 }
             }
         }
-        
     }
-        echo '<script>alert("Berhasil Sinkronisasi Data")</script>';
+    echo '<script>alert("Berhasil Sinkronisasi Data")</script>';
         $_SESSION['sync'] = false;
 }
 

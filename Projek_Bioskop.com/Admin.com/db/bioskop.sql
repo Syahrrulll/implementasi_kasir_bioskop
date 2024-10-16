@@ -80,26 +80,6 @@ INSERT INTO jadwal VALUES ('21','09:00:00','10:45:00','Sabtu','40');
 INSERT INTO jadwal VALUES ('22','02:00:00','04:00:00','Senin','38');
 
 
-CREATE TABLE `kelompok1` (
-  `id` int NOT NULL,
-  `nim` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `nama` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-
-
-CREATE TABLE `penjualan` (
-  `id_penjualan` int NOT NULL AUTO_INCREMENT,
-  `id_buku` int DEFAULT NULL,
-  `kualitas` int DEFAULT NULL,
-  `tgl_penjualan` date DEFAULT NULL,
-  PRIMARY KEY (`id_penjualan`),
-  KEY `id_buku` (`id_buku`),
-  CONSTRAINT `penjualan_ibfk_1` FOREIGN KEY (`id_buku`) REFERENCES `buku` (`id_buku`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-
 
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -113,8 +93,8 @@ CREATE TABLE `users` (
 INSERT INTO users VALUES ('1','arul','123','2024-10-06 15:19:41');
 INSERT INTO users VALUES ('3','jule','123','2024-10-11 12:35:06');
 INSERT INTO users VALUES ('6','Admin','pass123','2024-10-06 16:13:07');
-INSERT INTO users VALUES ('7','icha','123','2024-10-06 21:21:51');
-INSERT INTO users VALUES ('8','syahrull','123','2024-10-06 21:22:04');
+INSERT INTO users VALUES ('7','icha','123','2024-10-06 21:21:51');  
 INSERT INTO users VALUES ('9','julee','123','2024-10-12 19:44:10');
+INSERT INTO users VALUES ('4','rul','123','2024-10-12 19:44:10');
 
 
