@@ -1,5 +1,3 @@
-
-
 CREATE TABLE `film` (
   `id` int NOT NULL AUTO_INCREMENT,
   `judul` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -52,10 +50,10 @@ CREATE TABLE `jadwal` (
   `id_jadwal` int NOT NULL AUTO_INCREMENT,
   `jam_tayang` time DEFAULT NULL,
   `jam_berakhir` time DEFAULT NULL,
-  `hari` varchar(15) DEFAULT NULL,
+  `hari` varchar(15) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `id_film` int DEFAULT NULL,
   PRIMARY KEY (`id_jadwal`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO jadwal VALUES ('2','21:36:00','22:36:00','Rabu','29');
 INSERT INTO jadwal VALUES ('3','22:00:00','09:00:00','Senin','38');
@@ -80,21 +78,19 @@ INSERT INTO jadwal VALUES ('21','09:00:00','10:45:00','Sabtu','40');
 INSERT INTO jadwal VALUES ('22','02:00:00','04:00:00','Senin','38');
 
 
-
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) NOT NULL,
-  `password` varchar(255) NOT NULL,
+  `username` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_add` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO users VALUES ('1','arul','123','2024-10-06 15:19:41');
 INSERT INTO users VALUES ('3','jule','123','2024-10-11 12:35:06');
 INSERT INTO users VALUES ('6','Admin','pass123','2024-10-06 16:13:07');
-INSERT INTO users VALUES ('7','icha','123','2024-10-06 21:21:51');  
+INSERT INTO users VALUES ('7','icha','123','2024-10-06 21:21:51');
 INSERT INTO users VALUES ('9','julee','123','2024-10-12 19:44:10');
-INSERT INTO users VALUES ('4','rul','123','2024-10-12 19:44:10');
 
 
