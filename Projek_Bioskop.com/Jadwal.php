@@ -45,7 +45,7 @@ $query = mysqli_query($db, "SELECT * FROM film INNER JOIN jadwal ON film.id = ja
             <?php
             while ($row = mysqli_fetch_array($query)) {
                 if ($hari == $row['hari']) {
-                    $filmId = $row['id'];
+                    $filmId = $row['id_jadwal'];
                     ?>
                     <div class="film-item">
                         <a href="#modal-<?php echo $filmId; ?>">
