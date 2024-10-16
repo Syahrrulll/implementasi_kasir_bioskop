@@ -29,8 +29,6 @@ header("location: signin.php");
         <h1>JADWAL BIOSKOP KEBIN</h1>
     </header>
 
-
-                        ?>
     <nav class="days-nav">
         <ul>
             <li><a href="jadwal.php?day=Senin">Senin</a></li>

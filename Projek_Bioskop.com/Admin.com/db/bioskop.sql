@@ -1,13 +1,3 @@
-CREATE TABLE `buku` (
-  `id_buku` int NOT NULL AUTO_INCREMENT,
-  `judul_buku` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `penulis` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `harga` int DEFAULT NULL,
-  `stok` int DEFAULT NULL,
-  `tahun_penerbitan` year DEFAULT NULL,
-  PRIMARY KEY (`id_buku`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
 
 
 CREATE TABLE `film` (
@@ -122,12 +112,9 @@ CREATE TABLE `users` (
 
 INSERT INTO users VALUES ('1','arul','123','2024-10-06 15:19:41');
 INSERT INTO users VALUES ('3','jule','123','2024-10-11 12:35:06');
-INSERT INTO users VALUES ('4','naya','123','2024-10-11 12:39:45');
 INSERT INTO users VALUES ('6','Admin','pass123','2024-10-06 16:13:07');
 INSERT INTO users VALUES ('7','icha','123','2024-10-06 21:21:51');
 INSERT INTO users VALUES ('8','syahrull','123','2024-10-06 21:22:04');
 INSERT INTO users VALUES ('9','julee','123','2024-10-12 19:44:10');
-INSERT INTO users VALUES ('15','pae','yahaha','2024-10-06 21:23:42');
-INSERT INTO users VALUES ('17','coba','123','2024-10-06 21:24:30');
 
 
