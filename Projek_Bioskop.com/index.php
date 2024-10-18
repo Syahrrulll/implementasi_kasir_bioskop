@@ -1,8 +1,12 @@
 <?php
 session_start();
-include 'service/database.php';
+
 
 $_SESSION['admin'] = false;
+
+$hostname = 'localhost';
+$username = 'root';
+$password = '';
 
 $db = new mysqli($hostname, $username, $password);
 
