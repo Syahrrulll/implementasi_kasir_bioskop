@@ -15,7 +15,7 @@ if ($db->connect_error) {
 } else {
 
     $query = "DROP DATABASE bioskop;";
-    if($db->query($query)) {}else{}
+    if($db->query($query)) {}   else{}
 
     $dbName = "bioskop";
     $dbCheckQuery = "SHOW DATABASES LIKE '$dbName'";
