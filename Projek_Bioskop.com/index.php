@@ -4,10 +4,6 @@ include 'service/database.php';
 
 $_SESSION['admin'] = false;
 
-$hostname = 'localhost';
-$username = 'root';
-$password = '';
-
 $db = new mysqli($hostname, $username, $password);
 
 if ($db->connect_error) {
@@ -43,7 +39,7 @@ if ($db->connect_error) {
             if (stripos($query, 'CREATE TABLE') === 0) {
                 if (stripos($query, 'IF NOT EXISTS') === false) {
                     $query = preg_replace('/^CREATE TABLE/i', 'CREATE TABLE IF NOT EXISTS', $query);
-                }
+                }else{}
 
                 if (preg_match('/CREATE TABLE IF NOT EXISTS `?(\w+)`?/i', $query, $matches)) {
                     $table_name = $matches[1];
@@ -52,7 +48,7 @@ if ($db->connect_error) {
                         if ($db->query($query) === TRUE) {} else {}} else {}
 
                     
-                }
+                }else{}
             } else {
                 $query = preg_replace('/^INSERT INTO/i', 'INSERT IGNORE INTO', $query);
                 if ($db->query($query) === TRUE) {} else {}
