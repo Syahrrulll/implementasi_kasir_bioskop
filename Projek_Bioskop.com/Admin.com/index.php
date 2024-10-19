@@ -20,7 +20,7 @@ if (isset($_SESSION['sync']) and $_SESSION['sync'] == true){
     if ($db->connect_error) {
         echo "<p class='error'>Koneksi gagal: " . $db->connect_error . "</p>";
     } else {
-
+        
         $query = "DROP DATABASE bioskop;";
         if($db->query($query)) {}else{}
 

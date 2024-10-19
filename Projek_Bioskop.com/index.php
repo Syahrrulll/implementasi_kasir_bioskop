@@ -4,9 +4,7 @@ session_start();
 
 $_SESSION['admin'] = false;
 
-$hostname = 'localhost';
-$username = 'root';
-$password = '';
+include "service/database.php";
 
 $db = new mysqli($hostname, $username, $password);
 
@@ -14,11 +12,16 @@ if ($db->connect_error) {
     echo "<p class='error'>Koneksi gagal: " . $db->connect_error . "</p>";
 } else {
 
-    $query = "DROP DATABASE bioskop;";
-    if($db->query($query)) {}   else{}
+    $dbCheckQuery = "SHOW DATABASES LIKE '$database_name'";
+    $result = $db->query($dbCheckQuery);
+        if ($result->num_rows == 1) {
+            $query = "DROP DATABASE bioskop;";
+            if($db->query($query)) {}   else{}
+        }else{}
 
-    $dbName = "bioskop";
-    $dbCheckQuery = "SHOW DATABASES LIKE '$dbName'";
+    
+
+    $dbCheckQuery = "SHOW DATABASES LIKE '$database_name'";
     $result = $db->query($dbCheckQuery);
 
     if ($result->num_rows == 0) {
