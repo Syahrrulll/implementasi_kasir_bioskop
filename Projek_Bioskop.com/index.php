@@ -4,7 +4,11 @@ session_start();
 
 $_SESSION['admin'] = false;
 
-include "service/database.php";
+$hostname = 'localhost';
+$username = 'root';
+$password = '';
+
+$database_name = 'bioskop';
 
 $db = new mysqli($hostname, $username, $password);
 
