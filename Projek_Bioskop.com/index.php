@@ -29,9 +29,9 @@ if ($db->connect_error) {
     $result = $db->query($dbCheckQuery);
 
     if ($result->num_rows == 0) {
-        $createDbQuery = "CREATE DATABASE $dbName";
+        $createDbQuery = "CREATE DATABASE $database_name";
         if ($db->query($createDbQuery) === TRUE) {} else {}} else {}
-    $db = mysqli_connect($hostname, $username, $password, $dbName   );
+    $db = mysqli_connect($hostname, $username, $password, $database_name   );
     $backup_file = 'Admin.com/db/bioskop.sql';
     $sql = file_get_contents($backup_file);
 
