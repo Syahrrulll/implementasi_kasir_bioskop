@@ -108,7 +108,7 @@ if ($db->connect_error) {
         <div class="welcome">
             SELAMAT DATANG DI WEB KEBIN
         </div>
-        <div class="description">Nikmati Film Favoritmu, Pesan Tiket dengan Mudah dan Cepat!</div>
+        <div class="description">Dapatkan informasi film favoritmu dengan Mudah dan Cepat!</div>
         <div class="batas_header">
             </div>
         </div>
@@ -129,7 +129,7 @@ if ($db->connect_error) {
     }
     ?>
 
-    <div class="caption">Dapatkan tiket film favoritmu kapan saja, di mana saja, bebas antri dan dijamin aman!</div>
+    <div class="caption">Pantau film favoritmu kapan saja dan dimana saja!</div>
 
     <div class="component1">
         <div class="image">
