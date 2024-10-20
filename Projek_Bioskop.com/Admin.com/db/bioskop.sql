@@ -55,7 +55,7 @@ CREATE TABLE `jadwal` (
   `hari` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `id_film` int DEFAULT NULL,
   PRIMARY KEY (`id_jadwal`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO jadwal VALUES ('2','21:36:00','22:36:00','Rabu','29');
 INSERT INTO jadwal VALUES ('3','22:00:00','09:00:00','Senin','38');
@@ -80,6 +80,8 @@ INSERT INTO jadwal VALUES ('21','09:00:00','10:45:00','Sabtu','40');
 INSERT INTO jadwal VALUES ('22','02:00:00','04:00:00','Senin','38');
 INSERT INTO jadwal VALUES ('23','15:30:00','17:00:00','Minggu','4');
 INSERT INTO jadwal VALUES ('24','20:00:00','21:52:00','Rabu','47');
+INSERT INTO jadwal VALUES ('25','10:00:00','11:59:00','Kamis','56');
+INSERT INTO jadwal VALUES ('26','13:00:00','15:00:00','Kamis','56');
 
 
 CREATE TABLE `users` (
