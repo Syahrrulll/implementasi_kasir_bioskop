@@ -242,7 +242,6 @@ if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true) {
             <a href="atur_jadwal.php">Atur Jadwal</a>
             <a href="daftar_jadwal.php">Daftar Jadwal</a>
             <a href="daftar_user.php">Daftar Pengguna</a>
-            <a href="impor.php">Impor Database</a>
             <a href="../logout.php">Keluar</a>
         </div>
         <div class="content">
