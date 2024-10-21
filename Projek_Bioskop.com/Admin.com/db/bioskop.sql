@@ -7,7 +7,7 @@ CREATE TABLE `film` (
   `poster` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `harga` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO film VALUES ('4','Luca','135','Drama, Petualangan','Luca Paguro seorang anak laki-laki berusia 13 tahun yang menyamar sebagai manusia, bersama sahabat barunya Alberto Scorfano dan Giulia Marcovaldo. Luca memiliki kemampuan untuk berubah bentuk menjadi manusia saat berada di darat.','luca_34.jpeg','35000');
 INSERT INTO film VALUES ('5','Kimetsu No Yaiba: Mugen Ressha-hen','157','Fantasi, Anime','Tanjiro Kamado, bergabung dengan Inosuke Hashibira, seorang anak laki-laki yang dibesarkan oleh babi hutan yang memakai kepala babi hutan, dan Zenitsu Agatsuma, seorang anak laki-laki ketakutan yang mengeluarkan kekuatan sejatinya ketika dia tidur, di dalam Kereta Infinity dalam misi baru dengan seorang Pilar Api, Kyojuro Rengoku , Untuk mengalahkan iblis yang telah menyiksa orang-orang dan membunuh pembunuh iblis yang menentangnya.','Kimetsu_no_yaiba_el_trenito_en_partes_portes.webp','40000');
@@ -44,16 +44,21 @@ INSERT INTO film VALUES ('52','Encanto','109','Musik, Comedy, Fantasi','Encanto 
 INSERT INTO film VALUES ('53','Raya and The Last Dragon','107','Animasi, Family, Comedy, Fantasi, Musical, Laga','Raya and the Last Dragon adalah Film yang berlatar di dunia fantasi Kumandra, di mana manusia dan naga pernah hidup berdampingan. Ceritanya mengikuti Raya, seorang pejuang muda yang berusaha menemukan naga terakhir, Sisu, untuk menyelamatkan tanahnya dari ancaman kegelapan yang disebut Druun. Dalam perjalanannya, Raya harus belajar mempercayai orang lain untuk mempersatukan kembali kerajaan yang terpecah. Film ini menonjolkan tema persatuan, kepercayaan, dan pengorbanan, dengan visual yang memukau dan budaya yang terinspirasi dari Asia Tenggara.',' Raya and The Last Dragon.jpg','40000');
 INSERT INTO film VALUES ('54','Mencuri Raden Saleh','154','Laga, Comedy,Petualangan','Mencuri Raden Saleh adalah Film yang bercerita tentang sekelompok anak muda yang merencanakan pencurian besar untuk mencuri lukisan karya pelukis legendaris Raden Saleh dari istana presiden. Dipimpin oleh Piko, seorang pemalsu lukisan, kelompok ini terdiri dari ahli dengan keahlian berbeda-beda, seperti peretas, pembalap, dan petarung. Misi mereka penuh dengan ketegangan dan bahaya, karena melibatkan intrik politik dan pengkhianatan. Film ini menggabungkan aksi seru dengan elemen drama dan menampilkan sinematografi yang kuat serta tema persahabatan dan keberanian.',' Mencuri Raden Saleh.jpg','40000');
 INSERT INTO film VALUES ('55','Merindu Cahaya de Amstel','107','Roman, Drama','Merindu Cahaya de Amstel adalah sebuah film drama religi Indonesia yang menceritakan kisah perjalanan spiritual seorang gadis Belanda bernama Marien Veenhoven yang kemudian memeluk agama Islam dan berganti nama menjadi Khadija. Film ini mengangkat tema tentang pencarian jati diri, cinta, dan perjuangan mempertahankan iman di tengah perbedaan budaya dan keyakinan.',' Merindu Cahaya de Amstel.jpg','40000');
+INSERT INTO film VALUES ('56','Kaka Boss','120','Drama, Komedi','Kaka Boss adalah film komedi yang mengisahkan perjalanan seorang pemuda bernama Kaka, yang tiba-tiba terpilih menjadi bos di sebuah perusahaan besar. Kaka, yang sebelumnya adalah seorang karyawan biasa, harus menghadapi berbagai tantangan dan intrik di dunia bisnis yang kompetitif. Dengan gaya kepemimpinan yang unik dan humoris, Kaka mencoba membawa perubahan positif di tempat kerjanya. Film ini dipenuhi dengan momen-momen lucu dan menghibur, sambil menggambarkan pentingnya persahabatan, keberanian, dan kejujuran dalam menghadapi berbagai rintangan. Dengan alur cerita yang menarik dan karakter-karakter yang menggemaskan, Kaka Boss berhasil menyajikan hiburan yang menghibur bagi penonton dari segala usia.',' KAKA BOSS.jpeg','40000');
+INSERT INTO film VALUES ('57','Agak Laen','119','Drama, Komedi','Agak Laen adalah film drama komedi yang menceritakan tentang dua sahabat, Roni dan Joni, yang memiliki kepribadian dan pandangan hidup yang sangat berbeda. Roni, seorang pemuda ambisius yang bercita-cita tinggi, berusaha mencapai impiannya di kota besar, sementara Joni, yang lebih santai dan humoris, lebih menikmati hidup apa adanya. Ketika mereka terjebak dalam berbagai situasi konyol dan penuh liku, mereka belajar tentang arti persahabatan, saling mendukung, dan menerima perbedaan satu sama lain. Film ini menyoroti tema kehidupan sehari-hari dengan sentuhan humor, serta menggambarkan perjalanan menemukan diri sendiri di tengah tantangan hidup. Agak Laen mengajak penonton untuk tertawa dan merenung tentang betapa berwarnanya perjalanan hidup.',' agak laen.jpeg','40000');
+INSERT INTO film VALUES ('58','Laut Tengah','108','Drama, Religi','\"Laut Tengah\" adalah film drama yang mengikuti perjalanan seorang pemuda bernama Joni, yang berusaha mencari jati diri dan makna hidupnya di tengah krisis yang melanda keluarganya. Setelah kehilangan orang tuanya, Joni memutuskan untuk meninggalkan kampung halamannya dan menjelajahi kehidupan di pesisir Laut Tengah. Di sana, ia bertemu dengan berbagai karakter unik yang membantunya memahami arti cinta, kehilangan, dan harapan. Melalui pengalaman-pengalaman yang penuh emosi, Joni belajar untuk menghadapi masa lalu dan menemukan kekuatan dalam dirinya untuk melanjutkan hidup. Dengan latar belakang keindahan laut dan konflik batin yang mendalam, \"Laut Tengah\" menyajikan kisah yang menyentuh tentang pencarian diri dan keberanian untuk melangkah maju.',' Laut Tengah.jpeg','40000');
+INSERT INTO film VALUES ('59','Kromoleo','80','Horor','\"Kromoleo\" adalah film yang mengisahkan tentang petualangan seorang anak muda bernama Bimo yang terjebak dalam dunia fantastis penuh warna. Bimo, yang memiliki kecintaan terhadap seni dan kreativitas, secara tidak sengaja menemukan sebuah portal yang membawanya ke dunia Kromoleo, di mana segala sesuatu dihasilkan dari warna dan imajinasi. Di dunia ini, ia bertemu dengan berbagai karakter menarik, masing-masing mewakili elemen warna yang berbeda. Saat Bimo berusaha untuk kembali ke dunia nyata, ia harus menghadapi tantangan yang menguji keberanian, kreativitas, dan persahabatan. Film ini menggabungkan elemen fantasi, seni, dan pesan moral tentang pentingnya imajinasi dan keberanian untuk mengejar impian. \"Kromoleo\" menawarkan pengalaman visual yang memukau dan cerita yang menginspirasi.',' Kromoleo.jpeg','35000');
+INSERT INTO film VALUES ('60','Heartbreak Motel','115','Roman, Drama','\"Heartbreak Motel\" adalah sebuah film drama romantis yang mengikuti kisah dua jiwa yang patah hati, di mana mereka terjebak dalam sebuah motel yang terletak di pinggir jalan. Setelah mengalami hubungan yang tidak berhasil, karakter utama, Aira dan Randi, menemukan diri mereka saling berpapasan di motel tersebut, masing-masing berjuang untuk melupakan masa lalu yang menyakitkan. Dalam suasana yang penuh kesedihan dan refleksi, mereka mulai berbagi cerita dan mengungkapkan perasaan terdalam mereka, menjalin koneksi yang tak terduga. Seiring berjalannya waktu, mereka menyadari bahwa meskipun hati mereka terluka, ada harapan dan kesempatan untuk cinta baru. \"Heartbreak Motel\" mengeksplorasi tema patah hati, penyembuhan, dan kekuatan cinta dalam mengatasi rasa sakit, dengan latar yang intim dan emosional. Film ini mengajak penonton untuk merenungkan perjalanan emosional dalam menemukan cinta dan memaafkan diri sendiri.',' Heartbreak Motel.jpeg','40000');
 
 
 CREATE TABLE `jadwal` (
   `id_jadwal` int NOT NULL AUTO_INCREMENT,
   `jam_tayang` time DEFAULT NULL,
   `jam_berakhir` time DEFAULT NULL,
-  `hari` varchar(15) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `hari` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `id_film` int DEFAULT NULL,
   PRIMARY KEY (`id_jadwal`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO jadwal VALUES ('2','21:36:00','22:36:00','Rabu','29');
 INSERT INTO jadwal VALUES ('3','22:00:00','09:00:00','Senin','38');
@@ -76,12 +81,17 @@ INSERT INTO jadwal VALUES ('19','03:00:00','05:00:00','Rabu','24');
 INSERT INTO jadwal VALUES ('20','13:00:00','14:52:00','Minggu','43');
 INSERT INTO jadwal VALUES ('21','09:00:00','10:45:00','Sabtu','40');
 INSERT INTO jadwal VALUES ('22','02:00:00','04:00:00','Senin','38');
+INSERT INTO jadwal VALUES ('23','15:30:00','17:00:00','Minggu','4');
+INSERT INTO jadwal VALUES ('24','20:00:00','21:52:00','Rabu','47');
+INSERT INTO jadwal VALUES ('25','10:00:00','11:59:00','Kamis','56');
+INSERT INTO jadwal VALUES ('27','15:30:00','16:42:00','Kamis','58');
+INSERT INTO jadwal VALUES ('28','10:00:00','11:55:00','Jumat','60');
 
 
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `username` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_add` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
