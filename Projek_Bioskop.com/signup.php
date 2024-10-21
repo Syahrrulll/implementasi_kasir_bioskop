@@ -2,20 +2,31 @@
 
     include 'service/database.php';
 
-    $sign_message = '';
+    $sql = "SELECT * FROM users WHERE 
+        username='$username' AND password='$password' ";
+        
     if(isset($_POST['signup'])){
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        $sql = "INSERT INTO users (username, password) VAlUES
-        ('$username', '$password')";
-
-        if($db->query($sql)){
-            echo '<script> alert("Daftar Akun Berhasil, Silahkan Login")</script>';
+        $sql = "SELECT * FROM users WHERE 
+        username='$username' AND password='$password' ";
+        $result = $db->query($sql);
+        if($result->num_rows > 0){
+            echo '<script> alert("Akun Sudah Ada!!")</script>';
         }else{
 
-            echo '<script> alert("Daftar Akun Gagal, Coba Lagi")</script>';
+            $sql = "INSERT INTO users (username, password) VAlUES
+            ('$username', '$password')";
+
+            if($db->query($sql)){
+                echo '<script> alert("Daftar Akun Berhasil, Silahkan Login")</script>';
+            }else{
+
+                echo '<script> alert("Daftar Akun Gagal, Coba Lagi")</script>';
+            }
         }
+
     }
 
 ?>
