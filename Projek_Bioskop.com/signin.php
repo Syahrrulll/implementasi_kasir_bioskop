@@ -53,7 +53,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('image/Background_login.jpg');
+    background-image: url('image/icha.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.2;
