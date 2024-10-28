@@ -161,6 +161,10 @@ if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true) {
             background-color: #0056b3;
             transform: scale(1.05);
         }
+        .nav2 a:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
 
         .content {
             text-align: center;
