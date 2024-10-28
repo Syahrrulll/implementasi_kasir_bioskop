@@ -123,14 +123,21 @@ if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true) {
             animation: fadeIn 1s ease-in forwards;
         }
 
-        .nav {
+        .nav1 {
             display: flex;
             justify-content: center;
             margin: 20px 0;
             animation: slideInFromLeft 0.7s ease-out;
         }
 
-        .nav a {
+        .nav2 {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            animation: slideInFromLeft 0.7s ease-out;
+        }
+
+        .nav1 a {
             text-decoration: none;
             color: #fff;
             background-color: #007bff;
@@ -140,7 +147,17 @@ if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true) {
             transition: background 0.3s, transform 0.3s;
         }
 
-        .nav a:hover {
+        .nav2 a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            margin: 0 10px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .nav1 a:hover {
             background-color: #0056b3;
             transform: scale(1.05);
         }
@@ -236,9 +253,11 @@ if (isset($_SESSION['alertupdate']) and $_SESSION['alertupdate'] == true) {
         <div class="header">
             <h1>Admin Page</h1>
         </div>
-        <div class="nav">
+        <div class="nav1">
             <a href="tambah_film.php">Tambah Film</a>
             <a href="daftar_film.php">Daftar Film</a>
+        </div>
+        <div class='nav2'>
             <a href="atur_jadwal.php">Atur Jadwal</a>
             <a href="daftar_jadwal.php">Daftar Jadwal</a>
             <a href="daftar_user.php">Daftar Pengguna</a>
