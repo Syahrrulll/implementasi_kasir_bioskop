@@ -131,10 +131,10 @@ body {
 
 @keyframes slide{
     0% {
-        transform: translateX(0);
+        transform: translateX(-200%);
     }
     20%{
-        transform: translateX(0);
+        transform: translateX(-200%);
     }
     40%{
         transform: translateX(-100%);
@@ -143,13 +143,13 @@ body {
         transform: translateX(-100%);
     }
     80%{
-        transform: translateX(-200%);
+        transform: translateX(0);
     }
     90%{
-        transform: translateX(-200%);
+        transform: translateX(0);
     }
     100%{
-        transform: translateX(0);
+        transform: translateX(-200%);
     }
 }
 

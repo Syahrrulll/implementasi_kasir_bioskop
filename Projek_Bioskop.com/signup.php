@@ -2,8 +2,6 @@
 
     include 'service/database.php';
 
-    $sql = "SELECT * FROM users WHERE 
-        username='$username' AND password='$password' ";
         
     if(isset($_POST['signup'])){
         $username = $_POST['username'];
@@ -12,10 +10,9 @@
         $sql = "SELECT * FROM users WHERE 
         username='$username' AND password='$password' ";
         $result = $db->query($sql);
-        if($result->num_rows > 0){
+        if($result->num_rows >= 1){
             echo '<script> alert("Akun Sudah Ada!!")</script>';
         }else{
-
             $sql = "INSERT INTO users (username, password) VAlUES
             ('$username', '$password')";
 
