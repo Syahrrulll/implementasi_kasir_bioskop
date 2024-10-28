@@ -201,7 +201,7 @@ body {
     position: absolute;
     width: 385px;
     height: 353px;
-    left: -15px;
+    left: -5px;
     top: -50px;
 
 }
@@ -341,10 +341,10 @@ body {
         margin-left: 150px;
     }
     .sign_in{
-        right: 11px;
+        left: 250px;
     }
     .btn_signin{
-        right: 31px;
+        left: 270px;
     }
     .sign_up
     {
@@ -354,7 +354,7 @@ body {
         right: 11px;
     }
     .watermark-kebin{
-        margin-left: 29px;
+        margin-left: 5px;
     }
 }
 
