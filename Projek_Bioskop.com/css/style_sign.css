@@ -3,7 +3,7 @@ body {
     position: relative;
     width: 1280px;
     height: 720px;
-    background-color: #799CBF;
+    background-color: #ffffff00;
 }
 
 .backgroun-sign {
@@ -49,7 +49,7 @@ body {
     height: 51px;
     left: 460px;
     top: 206px;
-    background: #316D87;
+    background: #eab9ce;
     border-radius: 24px;
     animation-delay: 0.4s;
 }
